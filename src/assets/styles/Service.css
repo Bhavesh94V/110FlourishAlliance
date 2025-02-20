@@ -1,0 +1,134 @@
+.service-item {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1),
+    0 5px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 2;
+  background-color: var(--primary-white);
+}
+
+.service-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15),
+    0 10px 20px rgba(0, 0, 0, 0.07);
+}
+
+.service-icon {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.svg-icon {
+  width: 60px;
+  height: 60px;
+  fill: var(--primary-white);
+}
+
+.Immigration-Heads {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--primary-black);
+}
+
+.ServicesTitle {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.AboutAreaContainer {
+  position: relative;
+  z-index: 1;
+  background-color: var(--primary-white);
+}
+
+.AboutAreaContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: url('../imgs/AboutArea/bginner.jpg'); */
+  background-color: white;
+  background-size: cover;
+  z-index: -1;
+}
+
+.Service-title::before,
+.Service-title::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  background: var(--primary-red);
+  border-radius: 2px;
+  top: 105%;
+}
+
+.Service-title::before {
+  width: 150px;
+  height: 5px;
+  left: 50%;
+  top: 105%;
+  transform: translateX(-50%);
+}
+
+.Service-title::after {
+  width: 6px;
+  height: 5px;
+  background: var(--primary-white);
+  animation: section-title-run 5s infinite linear;
+}
+
+@keyframes section-title-run {
+  0% {
+    transform: translateX(-75px);
+  }
+
+  50% {
+    transform: translateX(45px);
+  }
+
+  100% {
+    transform: translateX(-75px);
+  }
+}
+
+.service-item a {
+  color: var(--primary-red);
+  border-color: var(--primary-red);
+  /* transition: background 0.3s ease, color 0.3s ease; */
+}
+
+
+.Service-Read-More {
+  position: relative;
+  /* padding: 1rem 2rem; */
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-white);
+  background: none;
+  border: 2px solid var(--primary-red);
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.liquid {
+  background: linear-gradient(var(--primary-red-hover) 0 0) no-repeat calc(200% - var(--p, 0%)) 100% / 200% var(--p, 0.2em);
+  transition: 0.3s var(--t, 0s),
+    background-position 0.3s calc(0.3s - var(--t, 0s));
+}
+
+.liquid:hover {
+  --p: 100%;
+  --t: 0.3s;
+  color: var(--primary-white);
+  /* Updated to use --primary-white */
+}

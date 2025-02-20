@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 70 70" fill="none">
+  <!-- Circular Frame -->
+  <circle cx="35" cy="35" r="34" stroke="#272974" stroke-width="2" />
+
+  <!-- Suitcase -->
+  <rect x="20" y="30" width="30" height="25" rx="5" fill="#DC1F26" stroke="#272974" stroke-width="2" />
+  <path d="M27 30 V20" stroke="#272974" stroke-width="2" />
+  <path d="M43 30 V20" stroke="#272974" stroke-width="2" />
+
+  <!-- Globe -->
+  <circle cx="35" cy="15" r="8" fill="#272974" />
+  <path d="M27 15 A8 8 0 0 1 43 15" stroke="#DC1F26" stroke-width="2" />
+  <path d="M35 7 L35 23" stroke="#DC1F26" stroke-width="2" />
+
+  <!-- Airplane -->
+  <path d="M48 13 L54 16 L50 18 L52 22 L48 20 L46 24 L44 20 L40 18 L46 16 L44 14 Z"
+    fill="#DC1F26" />
+</svg>

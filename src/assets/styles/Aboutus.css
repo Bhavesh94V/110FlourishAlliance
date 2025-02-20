@@ -1,0 +1,97 @@
+.About-title::before,
+.About-title::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  top: 100%;
+  background: var(--primary-red);
+  border-radius: 2px;
+}
+
+.About-title::before {
+  width: 150px;
+  height: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.About-title::after {
+  width: 6px;
+  height: 5px;
+  background: var(--primary-white);
+  animation: section-title-run 5s infinite linear;
+}
+
+@keyframes section-title-run {
+  0% {
+    transform: translateX(-75px);
+  }
+  50% {
+    transform: translateX(45px);
+  }
+  100% {
+    transform: translateX(-75px);
+  }
+}
+
+
+.about .container .section-about-title {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.about .container .section-about-title::before {
+    content: "";
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-right: -50px;
+}
+
+.about .col-lg-7.about-content {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+.section-about-head{
+    font-size: 32px;
+}
+
+.AboutContent{
+    color: var(--primary-black);
+}
+
+.Readmore{
+    margin-bottom: 10px;
+}
+
+.About-Read-More {
+  position: relative;
+  /* padding: 1rem 2rem; */
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-red);
+  background: none;
+  border: 2px solid var(--primary-red);
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.liquid {
+  background: linear-gradient(var(--primary-red-hover) 0 0) no-repeat calc(200% - var(--p, 0%))
+    100% / 200% var(--p, 0.2em);
+  transition: 0.3s var(--t, 0s),
+    background-position 0.3s calc(0.3s - var(--t, 0s));
+}
+
+.liquid:hover {
+  --p: 100%;
+  --t: 0.3s;
+  color: var(--primary-white); /* Updated to use --primary-white */
+}

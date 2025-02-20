@@ -1,0 +1,436 @@
+
+.AboutPageMain .about-section-container {
+    color: var(--primary-black);
+}
+
+
+
+.AboutPageMain .contact-button:hover {
+    background-color: var(--primary-red-hover);
+}
+
+/* About Section */
+.AboutPageMain .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    gap: 40px;
+}
+
+.AboutPageMain .image-section {
+    width: 40%;
+}
+
+.AboutPageMain .main-image {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.AboutPageMain .content-section {
+    width: 55%;
+}
+
+.AboutPageMain .content-section h3 {
+    font-size: 2.2rem;
+    color: var(--primary-red);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.AboutPageMain .content-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: var(--primary-black);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .AboutPageMain .about-content {
+        flex-direction: column;
+        padding: 30px;
+        gap: 30px;
+    }
+
+    .AboutPageMain .image-section,
+    .AboutPageMain .content-section {
+        width: 100%;
+    }
+
+    .AboutPageMain .main-image {
+        max-height: 400px;
+    }
+
+    .AboutPageMain .content-section h3 {
+        font-size: 1.8rem;
+    }
+
+    .AboutPageMain .content-section p {
+        font-size: 0.95rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .AboutPageMain .about-content {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .AboutPageMain .content-section h3 {
+        font-size: 1.6rem;
+    }
+
+    .AboutPageMain .content-section p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Icon Boxes */
+.AboutPageMain .icons {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.AboutPageMain .icon-box {
+    text-align: center;
+    width: 30%;
+    padding: 20px;
+    background-color: #eaeaea66;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.AboutPageMain .icon-box:hover {
+    transform: scale(1.025);
+    transition: all 0.3s;
+}
+
+.AboutPageMain .icon-box i {
+    font-size: 40px;
+    color: var(--primary-red);
+    margin-bottom: 15px;
+}
+
+.AboutPageMain .icon-box h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.AboutPageMain .icon-box p {
+    font-size: 0.9rem;
+    color: var(--primary-black);
+}
+
+/* Responsive Icon Boxes */
+@media screen and (max-width: 1024px) {
+    .AboutPageMain .icon-box {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .AboutPageMain .icon-box {
+        width: 100%;
+    }
+
+    .AboutPageMain .icon-box i {
+        font-size: 30px;
+        /* Reduced icon size for small screens */
+    }
+
+    .AboutPageMain .icon-box h4 {
+        font-size: 1rem;
+        /* Reduced heading font size */
+    }
+
+    .AboutPageMain .icon-box p {
+        font-size: 0.8rem;
+        /* Reduced paragraph font size */
+    }
+}
+
+/* Buttons */
+.AboutPageMain .luxury-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.AboutPageMain .btn-primary,
+.AboutPageMain .btn-secondary {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    text-align: center;
+    transition: all linear .3s;
+}
+
+.AboutPageMain .btn-primary {
+    background-color: var(--primary-red);
+    color: var(--primary-white);
+}
+
+.AboutPageMain .btn-primary:hover {
+    background-color: var(--primary-red-hover);
+    scale: 1.075;
+}
+
+.AboutPageMain .btn-secondary {
+    background-color: var(--primary-white);
+    color: var(--primary-black);
+    border: 2px solid var(--primary-red);
+}
+
+.AboutPageMain .btn-secondary:hover {
+    background-color: var(--primary-red-hover);
+    color: var(--primary-white);
+    border-color: var(--primary-white);
+    scale: 1.075;
+}
+
+.AboutPageMain .team-container {
+    padding: 40px;
+    text-align: center;
+}
+
+.AboutPageMain .section-header {
+    margin-bottom: 40px;
+}
+
+.AboutPageMain .section-title {
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--primary-black);
+    margin: 0;
+}
+
+.section-subtitle {
+    font-size: 32px;
+    color: var(--primary-red);
+    font-weight: 700;
+}
+
+.AboutPageMain .divider {
+    width: 100px;
+    height: 3px;
+    background-color: var(--primary-red);
+    margin: 15px auto 0;
+    border-radius: 5px;
+}
+
+/* Team Row Styles */
+.AboutPageMain .team-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Individual Member Styles */
+.AboutPageMain .team-member {
+    width: 300px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.AboutPageMain .team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.AboutPageMain .image-wrapper img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.AboutPageMain .team-member:hover .image-wrapper img {
+    transform: scale(1.025);
+}
+
+/* Social Icons */
+.AboutPageMain .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.AboutPageMain .social-icons a {
+    color: var(--primary-red);
+    font-size: 18px;
+    text-decoration: none;
+    background: #fff;
+    border: 1px solid var(--primary-red-hover);
+    padding: 6px 12px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.AboutPageMain .social-icons a:hover {
+    color: #fff;
+    background: linear-gradient(45deg, #ff8c00, #ff0080);
+    border: none;
+    transform: scale(1.1);
+}
+
+/* Member Info */
+.AboutPageMain .member-info h5 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 10px 0 px;
+    color: #333;
+}
+
+.AboutPageMain .member-info p {
+    font-size: 14px;
+    color: #808b8d;
+    font-weight: 500;
+    margin: 8px;
+}
+
+/* General container styling */
+.AboutPageMain .country-section {
+    margin-bottom: 20px;
+}
+
+.AboutPageMain .slider-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-red);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.AboutPageMain .slider-subtitle {
+    font-size: 1.2rem;
+    color: var(--primary-black);
+    margin: 0 auto;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* Slider styling */
+.AboutPageMain .slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+.AboutPageMain .slider {
+    display: flex;
+    animation: scroll 15s linear infinite;
+    width: calc(300px * 9);
+    /* Adjust width for 9 images */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-1200px);
+        /* Scroll 4 images (300px each) off the screen */
+    }
+}
+
+.AboutPageMain .slider-item {
+    position: relative;
+    flex-shrink: 0;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.AboutPageMain .slider-image {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover;
+}
+
+.AboutPageMain .slider-image:hover {
+    transform: scale(1.1);
+}
+
+/* Hover text styling */
+.AboutPageMain .hover-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.19);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.AboutPageMain .slider-item:hover .hover-text {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.AboutPageMain .hover-text::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+    z-index: -1;
+}
+
+.AboutPageMain .slider-item:hover .hover-text::before {
+    transform: translateY(0);
+}
+
+
+@keyframes moveBackground {
+    0% {
+        background-position-y: 10%;
+    }
+
+    100% {
+        background-position-y: 20%;
+        /* Moves up by 20px */
+    }
+}
+@keyframes moveBackground2 {
+    0% {
+        background-position-y: 100%;
+    }
+
+    100% {
+        background-position-y: 90%;
+        /* Moves up by 20px */
+    }
+}

@@ -1,0 +1,403 @@
+:root {
+    --primary-red: #b21e24;
+    --primary-red-hover: #871216;
+    --primary-black: #000000;
+    --primary-white: #ffffff;
+    --primary-grey: #d3d3d3;
+    --bg-light: #f8f9fa;
+    --text-dark: #333;
+}
+
+.bookNowPage .immigration-steps {
+    font-family: 'Poppins', sans-serif;
+    max-width: 900px;
+    margin: auto;
+    background: var(--primary-white);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Steps Header */
+.bookNowPage .immigration-steps .steps-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    /* border-bottom: 3px solid var(--primary-grey); */
+    padding-bottom: 12px;
+}
+
+.bookNowPage .immigration-steps .step {
+    flex: 1;
+    text-align: center;
+    font-weight: 600;
+    color: #777;
+    position: relative;
+    font-size: 14px;
+}
+
+.bookNowPage .immigration-steps .step.active {
+    color: var(--primary-red);
+}
+
+/* Appointment Container */
+.bookNowPage .immigration-steps .appointment-container {
+    display: flex;
+    gap: 20px;
+}
+
+.bookNowPage .immigration-steps .left-panel {
+    background: var(--bg-light);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.bookNowPage .immigration-steps .right-panel {
+    background: var(--bg-light);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Date & Time Selection */
+.bookNowPage .immigration-steps .date-time-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.bookNowPage .immigration-steps .date-selection h4,
+.bookNowPage .immigration-steps .time-selection h4 {
+    text-align: start;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+/* Date Picker */
+.bookNowPage .immigration-steps .date-picker {
+    display: flex;
+    justify-content: center;
+}
+
+.bookNowPage .immigration-steps .date-picker input {
+    padding: 12px;
+    border: 1px solid var(--primary-red);
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    background: var(--primary-white);
+    transition: 0.3s;
+}
+
+.bookNowPage .immigration-steps .date-picker input:hover {
+    background: var(--primary-red);
+    color: var(--primary-white);
+}
+
+/* Time Selection */
+.bookNowPage .immigration-steps .time-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.bookNowPage .immigration-steps .time-grid button {
+    padding: 10px;
+    border: 1px solid var(--primary-red);
+    background: var(--primary-white);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+    color: #000;
+}
+
+.bookNowPage .immigration-steps .time-grid button:hover {
+    background: var(--primary-red);
+    color: var(--primary-white);
+}
+
+/* Buttons Container */
+.bookNowPage .immigration-steps .button-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.bookNowPage .immigration-steps button {
+    width: 140px;
+    height: 45px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Next & Submit Button */
+.bookNowPage .immigration-steps .next-button,
+.bookNowPage .immigration-steps form button[type='submit'] {
+    background: var(--primary-red);
+    color: var(--primary-white);
+}
+
+.bookNowPage .immigration-steps .next-button:hover,
+.bookNowPage .immigration-steps form button[type='submit']:hover {
+    background: var(--primary-red-hover);
+}
+
+.bookNowPage .immigration-steps .next-button:disabled {
+    background: #b3b3b3;
+    cursor: not-allowed;
+}
+
+/* Previous Button */
+.bookNowPage .immigration-steps .previous-button {
+    background: var(--primary-grey);
+    color: var(--text-dark);
+}
+
+.bookNowPage .immigration-steps .previous-button:hover {
+    background: var(--primary-red);
+    color: var(--primary-white);
+}
+
+/* Form Container */
+.bookNowPage .immigration-steps .form-container {
+    background: var(--bg-light);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.bookNowPage .immigration-steps .form-container h3 {
+    text-align: center;
+    color: var(--primary-red);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.bookNowPage .immigration-steps form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.bookNowPage .immigration-steps .input-group {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.bookNowPage .immigration-steps .input-group input {
+    flex: 1;
+}
+
+.bookNowPage .immigration-steps form input,
+.bookNowPage .immigration-steps form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+.bookNowPage .immigration-steps form input:focus,
+.bookNowPage .immigration-steps form textarea:focus {
+    border: 1px solid var(--primary-red);
+    box-shadow: 0 0 5px rgba(178, 30, 36, 0.2);
+    outline: none;
+}
+
+.bookNowPage .immigration-steps .full-width {
+    width: 100%;
+}
+
+.bookNowPage .immigration-steps form textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bookNowPage .immigration-steps .input-group {
+        flex-direction: column;
+    }
+
+    .bookNowPage .immigration-steps .time-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bookNowPage .immigration-steps .button-group {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+
+.bookNowPage .immigration-steps {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.bookNowPage .immigration-steps {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bookNowPage .immigration-steps .steps-header {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.bookNowPage .immigration-steps .step {
+    flex: 1;
+    padding: 10px;
+    border-bottom: 3px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+.bookNowPage .immigration-steps .step.active {
+    border-color: #B21E24;
+    font-weight: bold;
+    color: #B21E24;
+}
+
+.bookNowPage .immigration-steps .appointment-container {
+    display: flex;
+    gap: 20px;
+}
+
+.bookNowPage .immigration-steps .left-panel {
+    flex: 1;
+    background-color: #f0f4f7;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.bookNowPage .immigration-steps .right-panel {
+    flex: 2;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.bookNowPage .immigration-steps .time-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+}
+
+.bookNowPage .immigration-steps .time-btn {
+    padding: 12px;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bookNowPage .immigration-steps .time-btn.selected {
+    background-color: #B21E24;
+    color: #fff;
+}
+
+.bookNowPage .immigration-steps .input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.bookNowPage .immigration-steps input,
+.bookNowPage .immigration-steps textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.bookNowPage .immigration-steps textarea {
+    resize: vertical;
+}
+
+.bookNowPage .immigration-steps .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.bookNowPage .immigration-steps .previous-button,
+.bookNowPage .immigration-steps .next-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bookNowPage .immigration-steps .previous-button {
+    background-color: #6c757d;
+}
+
+.bookNowPage .immigration-steps .previous-button:hover {
+    background-color: #5a6268;
+}
+
+.bookNowPage .immigration-steps .next-button {
+    background-color: #B21E24;
+}
+
+.bookNowPage .immigration-steps .next-button:hover {
+    background-color: #871216;
+}
+
+.bookNowPage .immigration-steps .confirmation-container .details-summary p {
+    margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .bookNowPage .immigration-steps .appointment-container {
+        flex-direction: column;
+    }
+
+    .bookNowPage .immigration-steps .left-panel,
+    .bookNowPage .immigration-steps .right-panel {
+        width: 100%;
+    }
+
+    .bookNowPage .immigration-steps .steps-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .bookNowPage .immigration-steps .input-group {
+        flex-direction: column;
+    }
+
+    .bookNowPage .immigration-steps .time-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .bookNowPage .immigration-steps .button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

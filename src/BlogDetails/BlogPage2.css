@@ -1,0 +1,92 @@
+ .BlogPageMain .header {
+     background-color: #a50333;
+     color: white;
+     padding: 3rem 1rem;
+     text-align: center;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     height: 300px;
+     margin: auto;
+ }
+
+ .BlogPageMain .header h1 {
+     margin: 0;
+     font-size: 32px;
+ }
+
+ .BlogPageMain .breadcrumb {
+     margin-top: 1rem;
+     color: white;
+     font-size: 1rem;
+ }
+
+ .BlogPageMain .content {
+     padding: 0rem 2rem 2rem 2rem;
+     max-width: 1000px;
+     margin: 0 auto;
+ }
+
+ .BlogPageMain .content img {
+     width: 100%;
+     border-radius: 10px;
+     margin-bottom: 1.5rem;
+ }
+
+ .BlogPageMain .quote {
+     background-color: #a50333;
+     color: white;
+     padding: 1rem;
+     margin: 2rem 0;
+     font-size: 1.1rem;
+     border-radius: 10px;
+     text-align: center;
+ }
+
+ .BlogPageMain .quote::before {
+     content: '\201C';
+     font-size: 2rem;
+     vertical-align: top;
+     margin-right: 5px;
+ }
+
+ .BlogPageMain .quote::after {
+     content: '\201D';
+     font-size: 2rem;
+     vertical-align: top;
+     margin-left: 5px;
+ }
+
+ .BlogPageMain .section-title {
+     font-size: 1.8rem;
+     margin-top: 2rem;
+     margin-bottom: 1rem;
+     color: #1a1a7e;
+ }
+
+ .BlogPageMain .tags {
+     margin-top: 2rem;
+ }
+
+ .BlogPageMain .tags span {
+     display: inline-block;
+     background-color: #a50333;
+     color: white;
+     padding: 0.5rem 1rem;
+     margin: 0.5rem;
+     border-radius: 5px;
+     font-size: 0.9rem;
+ }
+
+ .BlogPageMain .social-icons {
+     margin-top: 2rem;
+     text-align: center;
+ }
+
+ .BlogPageMain .social-icons a {
+     margin: 0 0.5rem;
+     color: #a50333;
+     text-decoration: none;
+     font-size: 1.5rem;
+ }
+

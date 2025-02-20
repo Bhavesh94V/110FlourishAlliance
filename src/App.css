@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --primary-red: #B21E24;
+  --primary-red-hover: #871216;
+  --primary-black: #000000;
+  --primary-white: #FFFFFF;
+  --primary-grey: #a69f9f5a;
+  --text-blue: #06A3DA;
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}

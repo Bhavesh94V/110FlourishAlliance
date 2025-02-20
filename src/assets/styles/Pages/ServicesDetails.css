@@ -1,0 +1,307 @@
+/* General Styles */
+.ServicesDetailsMain {
+    color: var(--primary-black);
+}
+
+/* ServiceInnerContent Section */
+.ServicesDetailsMain .bg-ServiceInnerContent {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--primary-black);
+    color: var(--primary-white);
+}
+
+.ServicesDetailsMain .ServiceInnerContent-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.ServicesDetailsMain .ServiceInnerContent-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ServicesDetailsMain .overlay-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+}
+
+.ServicesDetailsMain .ServiceInnerContent-text {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.ServicesDetailsMain .ServiceInnerContent-text h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.ServicesDetailsMain .ServiceInnerContent-text p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.ServicesDetailsMain .contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-red);
+    color: var(--primary-white);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.ServicesDetailsMain .contact-button:hover {
+    background-color: var(--primary-red-hover);
+}
+
+.ServicesDetailsMain .MainTitle {
+    color: var(--primary-red);
+    font-size: 28px;
+}
+
+.ServicesDetailsMain .FirstImage {
+    max-width: 350px;
+}
+
+.TitleAfterBefore {
+    position: relative;
+    display: inline-block;
+}
+
+.TitleAfterBefore::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    left: 0%;
+    bottom: -5px;
+    background-color: var(--primary-red);
+    animation: moveLineAfter 5s ease-in-out infinite;
+}
+
+.TitleAfterBefore::before {
+    content: '';
+    width: 0%;
+    height: 1px;
+    position: absolute;
+    bottom: -10px;
+    background-color: var(--primary-red);
+    animation: moveLineBefore 5s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+@keyframes moveLineAfter {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 60%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+
+/* Keyframes for the before pseudo-element */
+@keyframes moveLineBefore {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 50%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+
+.info-badge {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+
+.info-badge::before,
+.info-badge::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 10px solid red;
+}
+
+.info-badge::before {
+    top: 4px;
+}
+
+.info-badge::after {
+    top: 4px;
+    left: 6px;
+}
+
+/* General container styling */
+.ServicesDetailsMain .country-section {
+    margin-bottom: 20px;
+}
+
+/* Title styling */
+.ServicesDetailsMain .slider-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-red);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Subtitle styling */
+.ServicesDetailsMain .slider-subtitle {
+    font-size: 1.2rem;
+    color: var(--primary-black);
+    margin: 0 auto;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* Slider container styling */
+.ServicesDetailsMain .slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Slider styling */
+.ServicesDetailsMain .slider {
+    display: flex;
+    /* animation: scroll 20s linear infinite reverse; */
+    width: calc(300px * 9);
+    /* Adjust width for 9 images */
+}
+
+/* Keyframe animation for scrolling slider */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-1200px);
+        /* Scroll 4 images (300px each) off the screen */
+    }
+}
+
+/* Slider item styling */
+.ServicesDetailsMain .slider-item {
+    position: relative;
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Image styling inside slider items */
+.ServicesDetailsMain .slider-image {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover;
+}
+
+/* Hover effect on images */
+.ServicesDetailsMain .slider-image:hover {
+    transform: scale(1.1);
+}
+
+/* Hover text styling inside slider items */
+.ServicesDetailsMain .hover-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.19);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Show hover text on hover */
+.ServicesDetailsMain .slider-item:hover .hover-text {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Background overlay for hover text */
+.ServicesDetailsMain .hover-text::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+    z-index: -1;
+}
+
+/* Show background overlay when hovering */
+.ServicesDetailsMain .slider-item:hover .hover-text::before {
+    transform: translateY(0);
+}
+
+@keyframes bgMove {
+    0% {
+        background-position-y: 0;
+    }
+
+    50% {
+        background-position-y: 20px;
+    }
+
+    100% {
+        background-position-y: 0;
+    }
+}
+
+.ServicesDetailsMain .ServiceStartImg {
+    background-image: url("https://amrutacademy.com/wp-content/uploads/2023/04/about-two-shape-2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 500px;
+    animation: bgMove 5s infinite ease-in-out;
+}
