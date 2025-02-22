@@ -1,28 +1,3 @@
-// import { SUBMIT_CONTACT_REQUEST, SUBMIT_CONTACT_SUCCESS, SUBMIT_CONTACT_FAILURE } from "../actions/contactActions";
-
-// const initialState = {
-//     loading: false,
-//     message: "",
-//     error: "",
-// };
-
-// const contactReducer = (state = initialState, action) => {
-//     switch (action.type) {
-//         case SUBMIT_CONTACT_REQUEST:
-//             return { ...state, loading: true, error: "" };
-//         case SUBMIT_CONTACT_SUCCESS:
-//             return { ...state, loading: false, message: action.payload };
-//         case SUBMIT_CONTACT_FAILURE:
-//             return { ...state, loading: false, error: action.payload };
-//         default:
-//             return state;
-//     }
-// };
-
-
-// export default contactReducer;
-
-
 import {
     SUBMIT_CONTACT_REQUEST,
     SUBMIT_CONTACT_SUCCESS,
@@ -38,25 +13,6 @@ const initialState = {
     error: "",
 };
 
-// const contactReducer = (state = initialState, action) => {
-//     switch (action.type) {
-//         case SUBMIT_CONTACT_REQUEST:
-//             return { ...state, loading: true, error: "" };
-//         case SUBMIT_CONTACT_SUCCESS:
-//             return { ...state, loading: false, message: action.payload };
-//         case SUBMIT_CONTACT_FAILURE:
-//             return { ...state, loading: false, error: action.payload };
-//         case 'SUBMIT_ELIGIBILITY_REQUEST':
-//             return { ...state, loading: true };
-//         case 'SUBMIT_ELIGIBILITY_SUCCESS':
-//             return { ...state, loading: false, message: action.payload };
-//         case 'SUBMIT_ELIGIBILITY_FAILURE':
-//             return { ...state, loading: false, error: action.payload };
-//         default:
-//             return state;
-//     }
-// };
-
 const contactReducer = (state = initialState, action) => {
     switch (action.type) {
         case SUBMIT_CONTACT_REQUEST:
@@ -71,9 +27,15 @@ const contactReducer = (state = initialState, action) => {
         case 'SUBMIT_ELIGIBILITY_FAILURE':
         case SUBMIT_APPOINTMENT_FAILURE:
             return { ...state, loading: false, error: action.payload };
+        case 'CLEAR_MESSAGES':
+            return {
+                ...state,
+                message: null,
+                error: null
+            };
         default:
             return state;
     }
 };
 
-export default contactReducer;  // Exporting both reducers as one
+export default contactReducer; 

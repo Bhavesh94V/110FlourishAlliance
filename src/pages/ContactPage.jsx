@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Footer from '../components/Footer';
 import ContactUsImg from '../assets/imgs/Pages/ContactUsImg.jpg';
 import '../assets/styles/Pages/ContactPage.css';
@@ -24,17 +24,6 @@ const ContactInfoItem = ({ icon, title, text }) => (
 );
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    full_name: '',
-    email: '',
-    phone: '',
-    message: ''
-  });
-
-  const [statusMessage, setStatusMessage] = useState('');
-
-  const dispatch = useDispatch();
-  const contactState = useSelector((state) => state.contact);
 
   const contactInfo = [
     {
@@ -68,6 +57,26 @@ export default function ContactPage() {
     },
   ];
 
+
+  const [formData, setFormData] = useState({ full_name: '', email: '', phone: '', message: '' });
+  const [statusMessage, setStatusMessage] = useState('');
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+  const dispatch = useDispatch();
+  const contactState = useSelector((state) => state.contact);
+
+  useEffect(() => {
+    if (contactState.message) {
+      setStatusMessage(contactState.message);
+    } else if (contactState.error) {
+      setStatusMessage(contactState.error);
+    }
+
+    if (statusMessage) {
+      const timer = setTimeout(() => setStatusMessage(''), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [contactState]);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -77,20 +86,17 @@ export default function ContactPage() {
     e.preventDefault();
     setStatusMessage('');
     dispatch(submitContactRequest(formData));
+    setIsButtonDisabled(true);
+    setFormData({ full_name: '', email: '', phone: '', message: '' });
+    setTimeout(() => setIsButtonDisabled(false), 20000);
   };
 
-  // Show status message from redux state
-  React.useEffect(() => {
-    if (contactState.message) {
-      setStatusMessage(contactState.message);
-    } else if (contactState.error) {
-      setStatusMessage(contactState.error);
-    }
-  }, [contactState]);
 
   return (
     <>
       <div className="contact-section-Footer md:mt-5 pt-5 bg-transparent" style={{ backgroundImage: `url(${bgImage})` }}>
+
+
         <div className="container-fluid bg-breadcrumb mt-5 flex flex-col">
           <div className="breadcrumb-image">
             <div className="overlay-gradient"></div>
@@ -112,6 +118,8 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
+
+
 
         <div className="contact-container" id="contact-container">
           <div className="contact-content">
@@ -168,8 +176,10 @@ export default function ContactPage() {
                     required
                   ></textarea>
                 </div>
-                <button type="submit" className="submit-button py-3">Submit</button>
-              </form>
+                <button type="submit" className="submit-button py-3" disabled={isButtonDisabled}>
+                  {isButtonDisabled ? "Please wait..." : "Submit"}
+                </button>
+              </form><br />
               {statusMessage && <p className="status-message">{statusMessage}</p>}
             </div>
           </div>

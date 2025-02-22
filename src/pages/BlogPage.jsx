@@ -45,81 +45,81 @@ const BlogPage = () => {
   const posts = [
     {
       id: 1,
-      title1: "Reprehenderit laboris labore except",
-      title: "Flourish Alliance",
-      disc: "A study visa consultancy service assists individuals who wish to study abroad...",
+      title1: "Global Education",
+      title: "Opportunities for Global Education",
+      disc: "Discover how global education can broaden horizons and open new career paths...",
       category: "Company",
       date: "Oct 19, 2022",
       image: blogimg1,
     },
     {
       id: 2,
-      title1: "Ut labore elit incididunt incididunt",
-      title: "Flourish Alliance",
-      disc: "A study visa consultancy service assists individuals who wish to study abroad...",
+      title1: "Success Stories",
+      title: "Achieving Success Through Study Visas",
+      disc: "Learn from inspiring stories of students who achieved success through study visas...",
       category: "Success Stories",
       date: "Oct 19, 2022",
       image: blogimg2,
     },
     {
       id: 3,
-      title1: "Another Blog Post blog",
-      title: "Flourish Alliance",
-      disc: "A study visa consultancy service assists individuals who wish to study abroad...",
+      title1: "Education Journey",
+      title: "The Journey to International Education",
+      disc: "Explore the steps and experiences involved in pursuing international education...",
       category: "Success Stories",
       date: "Oct 20, 2022",
       image: blogimg3,
     },
     {
       id: 4,
-      title1: "Blog Post 4",
-      title: "Flourish Alliance",
-      disc: "More blog content about study visa consultancy services...",
+      title1: "Student Success",
+      title: "Guiding Students to Global Success",
+      disc: "Our consultancy guides students toward achieving global success in education...",
       category: "Company",
       date: "Oct 21, 2022",
       image: img3,
     },
     {
       id: 5,
-      title1: "Blog Post 5",
-      title: "Flourish Alliance",
-      disc: "Another interesting blog post about trends in the industry...",
+      title1: "Visa Process",
+      title: "Navigating the Study Visa Process",
+      disc: "Understand the study visa process with expert guidance and support...",
       category: "Success Stories",
       date: "Oct 22, 2022",
       image: img1,
     },
     {
       id: 6,
-      title1: "Blog Post 5",
-      title: "Flourish Alliance",
-      disc: "Another interesting blog post about trends in the industry...",
+      title1: "Study Abroad",
+      title: "Making Your Study Abroad Dreams",
+      disc: "Turn your dreams of studying abroad into reality with professional support...",
       category: "Company",
       date: "Oct 22, 2022",
       image: img2,
     },
     {
       id: 7,
-      title1: "Blog Post 4",
-      title: "Flourish Alliance",
-      disc: "More blog content about study visa consultancy services...",
+      title1: "Visa Stories",
+      title: "Inspiring Study Visa Success Stories",
+      disc: "Read success stories of students who made their study abroad dreams come true...",
       category: "Success Stories",
       date: "Oct 21, 2022",
       image: blogimg4,
     },
     {
       id: 8,
-      title1: "Blog Post 5",
-      title: "Flourish Alliance",
-      disc: "Another interesting blog post about trends in the industry...",
+      title1: "Education Goals",
+      title: "Achieving Educational Dreams Abroad",
+      disc: "Achieve your educational aspirations by studying at renowned global institutions...",
       category: "Success Stories",
       date: "Oct 22, 2022",
       image: blogimg5,
     },
     {
       id: 9,
-      title1: "Blog Post 5",
-      title: "Flourish Alliance",
-      disc: "Another interesting blog post about trends in the industry...",
+      title1: "Visa Guidance",
+      title: "Expert Guidance for Study Visas",
+      disc: "Get expert advice and support to make your study visa application process smooth...",
       category: "Company",
       date: "Oct 22, 2022",
       image: blogimg6,
@@ -264,10 +264,10 @@ const BlogPage = () => {
                       </div>
                       <div className="blog-content p-4">
                         <div className="flex justify-between mb-3 text-[22px] text-[#B21E24]">
-                          <h3>{blog.title}</h3>
+                          <h3>{blog.title1}</h3>
                           <span className="text-[16px]"><i className="fa fa-calendar text-[#B21E24]"></i> {blog.date}</span>
                         </div>
-                        <Link to="#" className="h4 d-inline-block mb-3 text-lg font-bold text-gray-900 hover:text-indigo-600">
+                        <Link to="#" className="h4 d-inline-block mb-3 text-lg font-bold text-gray-900 hover:text-[#B21E24]">
                           {blog.title}
                         </Link>
                         <p className="mb-3 text-gray-600">{blog.disc}</p>

@@ -60,12 +60,12 @@ export default function Blog2() {
         <div class="container mx-auto text-white px-5">
           <div class="flex flex-col items-start justify-between">
             <div className='border-b border-dashed py-3'>
-              <h1 class="text-4xl font-semibold md:mt-[10px]">Canada Immigration Consultants</h1>
+              <h1 class="text-4xl font-semibold md:mt-[10px]">Achieving Success Through Study Visas</h1>
             </div>
             <div class="max-w-3xl mt-4 md:mt-0">
               <p class="text-lg">
-                Duis imperdiet hendrerit commodo. Aliquam ultricies porta convallis.
-                Nam consequat massa augue. Sed ac scelerisque nisl. Lorem ipsum dolor sit.
+                Study visas have helped students unlock global opportunities, gain quality education,
+                and build successful careers abroad.
               </p>
             </div>
           </div>
@@ -85,7 +85,7 @@ export default function Blog2() {
               </li>
               <span>/</span>
               <li>
-                <span class="text-gray-500">Canada Immigration Consultants</span>
+                <span class="text-gray-500">Achieving Success Through Study Visas</span>
               </li>
             </ol>
           </nav>
@@ -101,63 +101,49 @@ export default function Blog2() {
               <img src={blogimg1} alt="" className='w-full h-auto rounded-t-lg' />
             </div>
 
-            <div className='bg-white  px-5 pt-3 rounded-lg mb-5'>
-              <h2 className="text-4xl font-bold my-5 text-danger text-center">Comprehensive Guide to Immigration: <br /> Everything You Need to Know</h2>
+            <div className='bg-white px-5 pt-3 rounded-lg mb-5'>
+              <h2 className="text-4xl font-bold my-5 text-danger text-center">
+                Achieving Success Through Study Visas: Everything You Need to Know
+              </h2>
               <blockquote className="border-l-4 border-danger pl-4 italic mb-4">
                 <p>
-                  "With the right guidance, your dreams of living and studying abroad can become a reality."
+                  "A study visa is the first step toward unlocking global education and building a brighter future."
                 </p>
               </blockquote>
               <div className="content mb-4">
-                <h3 className="text-2xl font-semibold mb-2 text-danger">1. General Immigration Guidance</h3>
+                <h3 className="text-2xl font-semibold mb-2 text-danger">1. Why Choose a Study Visa?</h3>
                 <p className="mb-4">
-                  Immigration can be complex, but understanding the process can make it easier. This guide will walk you through different visa types, important documents, and common challenges.
+                  Study visas offer students the opportunity to gain world-class education, experience diverse cultures, and enhance career prospects by studying abroad.
                 </p>
 
-                <h3 className="text-2xl font-semibold mb-2 text-danger">2. Visa Types Explained</h3>
+                <h3 className="text-2xl font-semibold mb-2 text-danger">2. Top Benefits of Studying Abroad</h3>
                 <ul className="list-disc pl-5 mb-4">
-                  <li><strong>Work Visa:</strong> For professionals seeking employment in a foreign country.</li>
-                  <li><strong>Study Visa:</strong> For students enrolling in educational institutions abroad.</li>
-                  <li><strong>Permanent Residency (PR):</strong> For individuals looking to settle permanently.</li>
-                  <li><strong>Business Visa:</strong> For entrepreneurs and business travelers.</li>
-                  <li><strong>Tourist Visa:</strong> For short-term travel and vacations.</li>
+                  <li><strong>Quality Education:</strong> Access to globally recognized universities and courses.</li>
+                  <li><strong>Career Growth:</strong> Improved job prospects with an international degree.</li>
+                  <li><strong>Global Exposure:</strong> Experience new cultures and build a global network.</li>
+                  <li><strong>Personal Development:</strong> Become independent and gain valuable life skills.</li>
                 </ul>
 
-                <h3 className="text-2xl font-semibold mb-2 text-danger">3. Immigration vs. Work Permit: Key Differences</h3>
+                <h3 className="text-2xl font-semibold mb-2 text-danger">3. Key Steps to Apply for a Study Visa</h3>
                 <p className="mb-4">
-                  An <strong>immigration visa</strong> allows a person to move to another country for long-term residency, while a <strong>work permit</strong> is a temporary authorization to work in a specific country under set conditions.
+                  Research your desired course and university, prepare required documents, apply for admission, and submit a study visa application with proof of funds and intent to study.
                 </p>
 
-                <div style={{ backgroundImage: `url(${chooseimgbg})`, backgroundPositionX: '350px', backgroundRepeat: 'no-repeat', backgroundPositionY: '20px' }}>
-                  <h3 className="text-2xl font-semibold mb-2 text-danger">4. Documents Checklist for Immigration</h3>
-                  <ul className="list-disc pl-5 mb-4">
-                    <li>Valid passport</li>
-                    <li>Visa application form</li>
-                    <li>Proof of funds</li>
-                    <li>Educational and professional certificates</li>
-                    <li>Medical test reports</li>
-                    <li>Biometrics appointment confirmation</li>
-                    <li>Letter of employment (if applicable)</li>
-                  </ul>
-                </div>
-
-                <h3 className="text-2xl font-semibold mb-2 text-danger">5. Common Reasons for Visa Rejection & How to Avoid Them</h3>
+                <h3 className="text-2xl font-semibold mb-2 text-danger">4. Common Challenges & How to Overcome Them</h3>
                 <ul className="list-disc pl-5 mb-4">
-                  <li><strong>Incomplete Documents:</strong> Ensure all required documents are submitted.</li>
-                  <li><strong>Insufficient Funds:</strong> Provide clear financial proof.</li>
-                  <li><strong>Inconsistent Information:</strong> Double-check all details before submission.</li>
-                  <li><strong>Criminal Record:</strong> Disclose any previous legal issues honestly.</li>
-                  <li><strong>Lack of Ties to Home Country:</strong> Show evidence of strong personal or professional commitments.</li>
+                  <li><strong>Visa Interview:</strong> Prepare well and present genuine study intentions.</li>
+                  <li><strong>Financial Proof:</strong> Maintain clear financial documentation.</li>
+                  <li><strong>Academic Requirements:</strong> Ensure eligibility for the chosen program.</li>
                 </ul>
 
-                <h3 className="text-2xl font-semibold mb-2 text-danger">6. Biometrics & Medical Exam Process</h3>
+                <h3 className="text-2xl font-semibold mb-2 text-danger">5. Real Success Stories</h3>
                 <p className="mb-4">
-                  Biometrics involves fingerprinting and a photograph, required for identity verification. Medical exams ensure the applicant meets health standards. It includes blood tests, X-rays, and general health checks.
+                  Many students have transformed their lives through study visas, securing prestigious jobs and achieving their dreams of living abroad.
                 </p>
 
-                <h3 className="text-2xl font-semibold mb-2 text-danger">7. Final Thoughts</h3>
+                <h3 className="text-2xl font-semibold mb-2 text-danger">6. Final Thoughts</h3>
                 <p className="mb-4">
-                  Immigration can be challenging, but with the right knowledge and preparation, you can increase your chances of success. Seek expert consultation if needed and ensure all documents are in order.
+                  With the right preparation and guidance, a study visa can be your gateway to a successful international career and a life-changing experience.
                 </p>
               </div>
             </div>

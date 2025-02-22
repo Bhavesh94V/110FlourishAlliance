@@ -29,7 +29,7 @@ export default function AboutUs() {
                         <div className="row g-5 align-items-center">
                             <div className="col-lg-5">
                                 <div className="h-100" style={{ border: '50px solid', borderColor: 'transparent #B21E24 transparent #B21E24' }}>
-                                    <img src={img2} className="img-fluid w-100 h-100 wow animate__animated animate__zoomIn" alt="About Image" />
+                                    <img src='https://img.freepik.com/free-photo/tall-building-center-city_657883-758.jpg?t=st=1740140155~exp=1740143755~hmac=a29afdc590cf2d3d4bf979d7360ea5c317e4004213b1d520e07dd46982f2d8cc&w=740' className="img-fluid w-100 h-100 wow animate__animated animate__zoomIn" alt="About Image" style={{maxHeight:"450px"}} />
                                 </div>
                             </div>
                             <div className="col-lg-7 about-content py-2" style={{ background: `linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(${aboutBg})` }}>
@@ -63,7 +63,7 @@ export default function AboutUs() {
                     </div>
                 </div>
             </div>
-            
+
         </>
     );
 }

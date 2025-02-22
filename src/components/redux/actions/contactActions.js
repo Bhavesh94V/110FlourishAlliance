@@ -1,25 +1,3 @@
-// export const SUBMIT_CONTACT_REQUEST = "SUBMIT_CONTACT_REQUEST";
-// export const SUBMIT_CONTACT_SUCCESS = "SUBMIT_CONTACT_SUCCESS";
-// export const SUBMIT_CONTACT_FAILURE = "SUBMIT_CONTACT_FAILURE";
-
-
-// export const submitContactRequest = (formData) => ({
-//     type: SUBMIT_CONTACT_REQUEST,
-//     payload: formData,
-// });
-
-// export const submitContactSuccess = (message) => ({
-//     type: SUBMIT_CONTACT_SUCCESS,
-//     payload: message,
-// });
-
-// export const submitContactFailure = (error) => ({
-//     type: SUBMIT_CONTACT_FAILURE,
-//     payload: error,
-// });
-
-
-
 
 export const SUBMIT_CONTACT_REQUEST = "SUBMIT_CONTACT_REQUEST";
 export const SUBMIT_CONTACT_SUCCESS = "SUBMIT_CONTACT_SUCCESS";

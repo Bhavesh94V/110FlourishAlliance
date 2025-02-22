@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../assets/styles/Opportunity.css';
 import bgImage from '../assets/imgs/AboutArea/bginner.jpg';
-// import LogosSection from '../components/LogosSection';
 import chooseimgbg from '../ServicesDetails/Service-MiniSlider-Imgs/chooseimgbg.png';
 import { FaUserCheck, FaFileAlt, FaHandHoldingUsd, FaClipboardCheck, FaChartLine, FaHeadset } from "react-icons/fa";
 import { useDispatch, useSelector } from 'react-redux';
@@ -28,11 +27,19 @@ export default function EligibilityForm() {
     const { loading, message, error } = useSelector((state) => state.eligibility);
 
     const [formData, setFormData] = useState({
-        firstName: "", middleName: "", lastName: "",
-        contact: "", email: "", country: "",
-        enquiry: "", education: "", dob: "",
-        sex: "", cv: null
+        firstName: "", lastName: "", contact: "", email: "",
+        country: "", enquiry: "", education: "", dob: "", sex: "", cv: null
     });
+
+    const [showMessage, setShowMessage] = useState(false);
+
+    useEffect(() => {
+        if (message || error) {
+            setShowMessage(true);
+            const timer = setTimeout(() => setShowMessage(false), 5000);
+            return () => clearTimeout(timer);
+        }
+    }, [message, error]);
 
     const handleChange = (e) => {
         const { name, value, type, files } = e.target;
@@ -43,13 +50,20 @@ export default function EligibilityForm() {
     };
 
     const validateForm = () => {
-        const { contact, email } = formData;
+        const { firstName, lastName, contact, email, country, enquiry, education, dob, sex, cv } = formData;
         const phoneRegex = /^[0-9]{10}$/;
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!firstName || !lastName || !contact || !email || !country || !enquiry || !education || !dob || !sex || !cv) {
+            alert("All fields are required.");
+            return false;
+        }
         if (!phoneRegex.test(contact)) {
+            alert("Invalid contact number. It should be 10 digits.");
             return false;
         }
         if (!emailRegex.test(email)) {
+            alert("Invalid email format.");
             return false;
         }
         return true;
@@ -65,6 +79,12 @@ export default function EligibilityForm() {
         });
 
         dispatch(submitEligibilityRequest(formDataToSend));
+        setFormData({
+            firstName: "", middleName: "", lastName: "",
+            contact: "", email: "", country: "",
+            enquiry: "", education: "", dob: "",
+            sex: "", cv: null
+        });
     };
 
     return (
@@ -77,33 +97,33 @@ export default function EligibilityForm() {
                         <div className="form-row">
                             <div className="form-group">
                                 <label>First Name:</label>
-                                <input type="text" name="firstName" onChange={handleChange} required />
+                                <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required />
                             </div>
                             <div className="form-group">
                                 <label>Middle Name:</label>
-                                <input type="text" name="middleName" onChange={handleChange} />
+                                <input type="text" name="middleName" value={formData.middleName} onChange={handleChange} />
                             </div>
                             <div className="form-group">
                                 <label>Last Name:</label>
-                                <input type="text" name="lastName" onChange={handleChange} required />
+                                <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required />
                             </div>
                         </div>
 
                         <div className="form-row">
                             <div className="form-group">
                                 <label>Contact No:</label>
-                                <input type="text" name="contact" onChange={handleChange} required />
+                                <input type="text" name="contact" value={formData.contact} onChange={handleChange} required />
                             </div>
                             <div className="form-group">
                                 <label>Email ID:</label>
-                                <input type="email" name="email" onChange={handleChange} required />
+                                <input type="email" name="email" value={formData.email} onChange={handleChange} required />
                             </div>
                         </div>
 
                         <div className="form-row">
                             <div className="form-group">
                                 <label>Country:</label>
-                                <select name="country" onChange={handleChange} required>
+                                <select name="country" value={formData.country} onChange={handleChange} required>
                                     <option value="">Select Country</option>
                                     {countries.map((c) => (
                                         <option key={c} value={c}>{c}</option>
@@ -112,7 +132,7 @@ export default function EligibilityForm() {
                             </div>
                             <div className="form-group">
                                 <label>Enquiry Type:</label>
-                                <select name="enquiry" onChange={handleChange} required>
+                                <select name="enquiry" value={formData.enquiry} onChange={handleChange} required>
                                     <option value="">Select Enquiry Type</option>
                                     {enquiries.map((e) => (
                                         <option key={e} value={e}>{e}</option>
@@ -124,7 +144,7 @@ export default function EligibilityForm() {
                         <div className="form-row">
                             <div className="form-group">
                                 <label>Education:</label>
-                                <select name="education" onChange={handleChange} required>
+                                <select name="education" value={formData.education} onChange={handleChange} required>
                                     <option value="">Select Education</option>
                                     {educations.map((edu) => (
                                         <option key={edu} value={edu}>{edu}</option>
@@ -133,7 +153,7 @@ export default function EligibilityForm() {
                             </div>
                             <div className="form-group">
                                 <label>Date of Birth:</label>
-                                <input type="date" name="dob" onChange={handleChange} required />
+                                <input type="date" name="dob" value={formData.dob} onChange={handleChange} required />
                             </div>
                         </div>
 
@@ -142,7 +162,7 @@ export default function EligibilityForm() {
                             <div className="radio-group">
                                 {["Male", "Female", "Other"].map((gender) => (
                                     <label key={gender}>
-                                        <input type="radio" name="sex" value={gender} onChange={handleChange} required /> {gender}
+                                        <input type="radio" name="sex" value={gender} checked={formData.sex === gender} onChange={handleChange} required /> {gender}
                                     </label>
                                 ))}
                             </div>
@@ -156,9 +176,9 @@ export default function EligibilityForm() {
                         <button type="submit" className="submit-btn" disabled={loading}>
                             {loading ? 'Submitting...' : 'Submit'}
                         </button>
-                        {/* {message && <p className={`mt-2 text-${message.includes('success') ? 'green' : 'red'}-600`}>{message}</p>} */}
-                        {message && <p className="message-success">{message}</p>}
-                        {error && <p className="message-error">{error}</p>}
+
+                        {showMessage && message && <p className="message-success">{message}</p>}
+                        {showMessage && error && <p className="message-error">{error}</p>}
                     </form>
                 </div>
 

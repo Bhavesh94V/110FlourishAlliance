@@ -20,26 +20,27 @@ export default function Blog() {
     const blogPosts = [
         {
             img: img1,
-            date: '3 Jan 2025',
-            title: 'The Future of Studying Abroad: Opportunities in Australia',
-            description: 'As the world is getting more and more linked, the prospect of moving abroad for studying or for work abroad has become a life-changing experience for those looking for academic success and worldwide professional ...',
+            date: new Date().toLocaleDateString(),
+            title: 'Opportunities for Global Education',
+            description: 'Explore how studying or working abroad can transform lives, offering academic success and global career growth through immersive experiences and access to world-class education and professional networks.',
             link: '/Blog/1'
         },
         {
             img: img2,
-            date: '10 Jan 2025',
-            title: 'How to Navigate the Australia PR Application Process ?',
-            description: 'Australia has established as a top choice for qualified professionals, students, and families globally. It is known for its strong economy, outstanding healthcare, high-quality education, and hospitable culture, as well as ...',
+            date: new Date().toLocaleDateString(),
+            title: 'Success with Study Visas',
+            description: 'Australia is a leading destination for professionals, students, and families, offering a strong economy, excellent healthcare, high-quality education, and a welcoming culture, making it perfect for international opportunities.',
             link: '/Blog/2'
         },
         {
             img: img3,
-            date: '5 Jan 2025',
-            title: 'How Studying in Australia can Impact PR Application Success?',
-            description: 'Australia ranks as the third most preferred destination for Indian students among various countries worldwide. Every year, hundreds of thousands of Indian students choose Australia for its high-quality education and lifestyle. As ...',
+            date: new Date().toLocaleDateString(),
+            title: 'Pathway to Global Education',
+            description: 'Australia is a top choice for Indian students seeking quality education and vibrant lifestyles, attracting thousands each year with its excellent institutions, dynamic multicultural environment, and career growth opportunities.',
             link: '/Blog/3'
         }
     ];
+
 
     return (
         <>
