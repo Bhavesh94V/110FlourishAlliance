@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../firebase';
 import { collection, addDoc, onSnapshot, query, orderBy, doc, deleteDoc } from 'firebase/firestore';
-import blogimg1 from "../assets/imgs/Blog/blogimg2.jpg";
+import blogimg5 from "../assets/imgs/Blog/blogimg5.jpg";
 import bgImage from "../assets/imgs/AboutArea/bginner.jpg";
 import Footer from '../components/Footer';
 import chooseimgbg from '../BlogDetails/chooseimgbg.png';
@@ -97,7 +97,7 @@ export default function Blog5() {
                 <main className="w-full lg:w-3/4">
                     <article className="bg-white rounded-lg overflow-hidden">
                         <div className="post-img mb-4">
-                            <img src={blogimg1} alt="" className='w-full h-auto rounded-t-lg' />
+                            <img src={blogimg5} alt="" className='w-full h-auto rounded-t-lg' />
                         </div>
 
                         <div className='bg-white px-5 pt-3 rounded-lg mb-5'>

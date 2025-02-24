@@ -47,6 +47,7 @@ import AirTiket from './Service-Details/AirTiket';
 import StartUpVisa from './Service-Details/StartUpVisa';
 import PassportSeva from './Service-Details/PassportSeva';
 import FormIcons from './components/FormIcons';
+import AppWrapper from './components/PopUpForm';
 
 
 function App() {
@@ -58,7 +59,6 @@ function App() {
     }, 4000);
   }, []);
 
-  // ✅ Inner ScrollToTop Component
   const ScrollToTop = () => {
     const { pathname } = useLocation();
 
@@ -110,7 +110,6 @@ function App() {
 
 
         {/* Country Routes */}
-        {/* <Route path="/country/:countryName" element={<CountryDetails />} /> */}
         <Route path="/country/Canada" element={<CanadaDetails />} />
         <Route path="/country/Australia" element={<AustraliaDetails />} />
         <Route path="/country/SouthAfrica" element={<SouthAfrica />} />
@@ -127,6 +126,7 @@ function App() {
       </Routes>
 
       {!loading && <FormIcons />}
+      {!loading && <AppWrapper />}
 
       <BackToTop />
     </div>

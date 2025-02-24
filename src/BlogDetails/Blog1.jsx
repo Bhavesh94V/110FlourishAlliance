@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../firebase';
 import { collection, addDoc, onSnapshot, query, orderBy, doc, deleteDoc } from 'firebase/firestore';
-import blogimg1 from "../assets/imgs/Blog/blogimg2.jpg";
+import blogimg1 from "../assets/imgs/Blog/blogimg1.jpg";
 import bgImage from "../assets/imgs/AboutArea/bginner.jpg";
 import Footer from '../components/Footer';
 import chooseimgbg from '../BlogDetails/chooseimgbg.png';

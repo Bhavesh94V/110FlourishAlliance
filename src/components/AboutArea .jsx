@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
 import "../assets/styles/AboutArea.css";
-import carousel1 from "../assets/imgs/AboutArea/cardpassport.jpg";
-import carousel2 from "../assets/imgs/FactsAndFeatures/Facts2.jpg";
+import carousel1 from "../assets/imgs/AboutArea/image1.jpg";
+import carousel2 from "../assets/imgs/AboutArea/image2.jpg";
 import WOW from 'wowjs';
 import 'animate.css';
-import LogosSection from "./LogosSection ";
 
 const features = [
     {
@@ -74,7 +73,7 @@ export default function AboutArea() {
 
     return (
         <>
-            <div className="container-fluid AboutAreaCOntainer pb-0  wow fadeInDown" data-wow-delay="0.3s">
+            <div className="container-fluid AboutAreaCOntainer pb-0">
                 <div className="container py-5">
                     <div className="section-title text-center position-relative pb-3 mb-5 mx-auto" style={{ maxWidth: "600px" }}>
                         <h5 className="font-bold text-[22px] text-uppercase WhyChoose wow animate__animated animate__fadeInDown">Why Choose Us</h5>

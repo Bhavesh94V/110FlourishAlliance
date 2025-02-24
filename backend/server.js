@@ -6,6 +6,7 @@ require('dotenv').config();
 const path = require('path');
 const multer = require('multer');
 const nodemailer = require('nodemailer');
+const axios = require("axios");
 
 const app = express();
 app.use(cors({ origin: 'http://localhost:3000' }));
@@ -49,6 +50,33 @@ const transporter = nodemailer.createTransport({
     tls: {
         rejectUnauthorized: false,
     },
+});
+
+// Homepage PopUp Form
+app.post("/send-email", async (req, res) => {
+    const { name, surname, email, contact, category } = req.body;
+
+    const mailOptions = {
+        from: process.env.EMAIL_USER,
+        to: process.env.RECIPIENT_EMAIL,
+        subject: `${name} Visited The Flourish Alliance`,
+        html: `
+            <h2>User Details</h2>
+            <p><strong>Name:</strong> ${name} ${surname}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Contact:</strong> ${contact}</p>
+            <p><strong>Category:</strong> ${category}</p>
+        `,
+    };
+
+    try {
+        await transporter.sendMail(mailOptions);
+        res.status(200).json({ success: true, message: "Email sent successfully!" });
+    } catch (error) {
+        console.error("Email send error:", error);
+        res.status(500).json({ success: false, message: "Failed to send email" });
+    }
+    
 });
 
 // ✅ Email Function for Eligibility Form

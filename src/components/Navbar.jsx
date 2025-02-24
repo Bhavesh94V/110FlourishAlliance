@@ -7,7 +7,7 @@ import 'animate.css';
 
 const navbarConfig = {
     contactInfo: [
-        { icon: "fas fa-envelope", text: "info@flourishimmigration.com", href: "mailto:info@flourishimmigration.com" },
+        { icon: "fas fa-envelope", text: "flourishalliance991@gmail.com", href: "mailto:info@flourishimmigration.com" },
         { icon: "fas fa-phone-alt", text: "+123 456 7890", href: "tel:+1234567890" },
     ],
     socialMedia: ["twitter", "facebook-f", "linkedin-in", "instagram", "youtube"],
@@ -118,7 +118,7 @@ export default function Navbar() {
                     >
                         <span className="fa fa-bars"></span>
                     </button>
-                    <div className="collapse navbar-collapse" id="navbarCollapse">
+                    <div className="collapse ps-5 navbar-collapse" id="navbarCollapse">
                         <div className="navbar-nav ms-auto py-0">
                             {
                                 navbarConfig.navLinks.map((link, idx) => (

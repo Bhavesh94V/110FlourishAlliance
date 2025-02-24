@@ -8,7 +8,6 @@ import LogosSection from './LogosSection '
 import Blog from './Blog'
 import Testimonial from './Testimonial'
 import Footer from './Footer'
-import FormIcons from './FormIcons'
 
 export default function HomePage() {
     return (
@@ -22,7 +21,6 @@ export default function HomePage() {
             <Blog></Blog>
             <Testimonial></Testimonial>
             <Footer></Footer>
-            {/* <FormIcons></FormIcons> */}
         </div>
     )
 }

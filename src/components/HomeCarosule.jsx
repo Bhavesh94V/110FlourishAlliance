@@ -1,17 +1,16 @@
 import React, { useEffect } from 'react';
 import '../assets/styles/HomeCarosule.css';
+import img1 from '../assets/imgs/HomeSlider/img1.jpg';
 import img2 from '../assets/imgs/HomeSlider/img2.jpg';
 import img3 from '../assets/imgs/HomeSlider/img3.jpg';
-import img4 from '../assets/imgs/HomeSlider/img4.jpg';
 import WOW from 'wowjs';
 import 'animate.css';
-import AboutUs from './AboutUs';
 
 export default function HomeCarousel() {
 
     const carouselData = [
         {
-            imgSrc: img3,
+            imgSrc: img1,
             altText: "Immigration Opportunities",
             heading: "Start Your Immigration Journey",
             subHeading: "Explore new opportunities with expert guidance.",
@@ -29,7 +28,7 @@ export default function HomeCarousel() {
             link: "#services"
         },
         {
-            imgSrc: img4,
+            imgSrc: img3,
             altText: "Study Abroad Assistance",
             heading: "Achieve Your Study Abroad Dreams",
             subHeading: "The first step toward global education starts here.",
@@ -49,9 +48,9 @@ export default function HomeCarousel() {
     useEffect(() => {
         const carousel = document.querySelector('#carouselId');
         const bootstrapCarousel = new window.bootstrap.Carousel(carousel, {
-            interval: 3000,
+            interval: 5000,
             ride: 'carousel',
-            pause: false,
+            pause: true,
         });
 
         const handleNavigation = () => {

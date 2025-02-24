@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../firebase';
 import { collection, addDoc, onSnapshot, query, orderBy, doc, deleteDoc } from 'firebase/firestore';
-import blogimg1 from "../assets/imgs/Blog/blogimg2.jpg";
+import blogimg9 from "../assets/imgs/Blog/blogimg9.jpg";
 import bgImage from "../assets/imgs/AboutArea/bginner.jpg";
 import Footer from '../components/Footer';
 import chooseimgbg from '../BlogDetails/chooseimgbg.png';
@@ -54,7 +54,7 @@ export default function Blog9() {
     };
 
     return (
-        <div className="pt-5 bg-cover bg-center min-h-screen Blog-Details" style={{ backgroundImage: `url(${ bgImage })` }}>
+        <div className="pt-5 bg-cover bg-center min-h-screen Blog-Details" style={{ backgroundImage: `url(${bgImage})` }}>
 
             <div class="bg-[#B21E24] lg:mt-[109px] md:mt-[50px] py-5 bg-custom mt-custom">
                 <div class="container mx-auto text-white px-5">
@@ -100,7 +100,7 @@ export default function Blog9() {
                 <main className="w-full lg:w-3/4">
                     <article className="bg-white rounded-lg overflow-hidden">
                         <div className="post-img mb-4">
-                            <img src={blogimg1} alt="" className='w-full h-auto rounded-t-lg' />
+                            <img src={blogimg9} alt="" className='w-full h-auto rounded-t-lg' />
                         </div>
 
                         <div className='bg-white px-5 pt-3 rounded-lg mb-5'>
@@ -134,7 +134,7 @@ export default function Blog9() {
                                     and provide personalized advice to enhance your chances of approval.
                                 </p>
 
-                                <div style={{ backgroundImage: `url(${ chooseimgbg })`, backgroundPosition: '350px 20px', backgroundRepeat: 'no-repeat' }}>
+                                <div style={{ backgroundImage: `url(${chooseimgbg})`, backgroundPosition: '350px 20px', backgroundRepeat: 'no-repeat' }}>
                                     <h3 className="text-xl font-semibold mb-2 text-danger">4. Essential Documents for Study Visa</h3>
                                     <ul className="list-disc pl-4 mb-3">
                                         <li>Valid passport</li>

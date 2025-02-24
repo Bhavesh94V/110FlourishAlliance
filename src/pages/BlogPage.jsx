@@ -8,9 +8,9 @@ import blogimg3 from "../assets/imgs/Blog/blogimg3.jpg";
 import blogimg4 from "../assets/imgs/Blog/blogimg4.jpg";
 import blogimg5 from "../assets/imgs/Blog/blogimg5.jpg";
 import blogimg6 from "../assets/imgs/Blog/blogimg6.jpg";
-import img1 from "../assets/imgs/Blog/img1.jpg";
-import img2 from "../assets/imgs/Blog/img2.jpg";
-import img3 from "../assets/imgs/Blog/img3.jpg";
+import blogimg7 from "../assets/imgs/Blog/blogimg7.jpg";
+import blogimg8 from "../assets/imgs/Blog/blogimg8.jpg";
+import blogimg9 from "../assets/imgs/Blog/blogimg9.jpg";
 import {
   FaUniversity, FaBriefcase, FaPlane, FaBuilding, FaNewspaper,
   FaTicketAlt, FaComments, FaGlobe
@@ -77,7 +77,7 @@ const BlogPage = () => {
       disc: "Our consultancy guides students toward achieving global success in education...",
       category: "Company",
       date: "Oct 21, 2022",
-      image: img3,
+      image: blogimg4,
     },
     {
       id: 5,
@@ -86,7 +86,7 @@ const BlogPage = () => {
       disc: "Understand the study visa process with expert guidance and support...",
       category: "Success Stories",
       date: "Oct 22, 2022",
-      image: img1,
+      image: blogimg5,
     },
     {
       id: 6,
@@ -95,7 +95,7 @@ const BlogPage = () => {
       disc: "Turn your dreams of studying abroad into reality with professional support...",
       category: "Company",
       date: "Oct 22, 2022",
-      image: img2,
+      image: blogimg6,
     },
     {
       id: 7,
@@ -104,7 +104,7 @@ const BlogPage = () => {
       disc: "Read success stories of students who made their study abroad dreams come true...",
       category: "Success Stories",
       date: "Oct 21, 2022",
-      image: blogimg4,
+      image: blogimg7,
     },
     {
       id: 8,
@@ -113,7 +113,7 @@ const BlogPage = () => {
       disc: "Achieve your educational aspirations by studying at renowned global institutions...",
       category: "Success Stories",
       date: "Oct 22, 2022",
-      image: blogimg5,
+      image: blogimg8,
     },
     {
       id: 9,
@@ -122,7 +122,7 @@ const BlogPage = () => {
       disc: "Get expert advice and support to make your study visa application process smooth...",
       category: "Company",
       date: "Oct 22, 2022",
-      image: blogimg6,
+      image: blogimg9,
     },
   ];
 

@@ -4,22 +4,24 @@ import { Plus, Minus, Download } from 'lucide-react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHandsHelping, faGraduationCap, faBriefcase, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import Footer from '../components/Footer';
+import countryImages from './countryImages';
+import { Link } from 'react-router-dom';
 
 export default function NewZealand() {
     const countries = [
-        { name: "Canada", flag: "/Images/Canada.png" },
-        { name: "Australia", flag: "/Images/Australiaflag.jpg" },
-        { name: "UK", flag: "/Images/UK.jpg" },
-        { name: "New Zealand", flag: "/Images/newZealand.jpg" },
-        { name: "USA", flag: "/Images/US.png" },
-        { name: "Denmark", flag: "/Images/Denmark.png" },
-        { name: "Belgium", flag: "/Images/Belgium.png" },
-        { name: "France", flag: "/Images/France.png" },
-        { name: "Germany", flag: "/Images/Germany.png" },
-        { name: "India", flag: "/Images/India.png" },
-        { name: "Japan", flag: "/Images/Japan.png" },
-        { name: "Brazil", flag: "/Images/Brazil.png" },
-        { name: "South Africa", flag: "/Images/SouthAfrica.png" },
+        { name: "Canada", flag: countryImages.Canada, path: "/country/Canada" },
+        { name: "Australia", flag: countryImages.Australia, path: "/country/Australia" },
+        { name: "UK", flag: countryImages.UK, path: "/country/UK" },
+        { name: "New Zealand", flag: countryImages.NewZealand, path: "/country/NewZealand" },
+        { name: "USA", flag: countryImages.USA, path: "/country/USA" },
+        { name: "Denmark", flag: countryImages.Denmark, path: "/country/Denmark" },
+        { name: "Belgium", flag: countryImages.Belgium, path: "/country/Belgium" },
+        { name: "France", flag: countryImages.France, path: "/country/France" },
+        { name: "Germany", flag: countryImages.Germany, path: "/country/Germany" },
+        { name: "Italy", flag: countryImages.Italy, path: "/country/Italy" },
+        { name: "Japan", flag: countryImages.Japan, path: "/country/Japan" },
+        { name: "Brazil", flag: countryImages.Brazil, path: "/country/Brazil" },
+        { name: "South Africa", flag: countryImages.SouthAfrica, path: "/country/SouthAfrica" },
     ];
 
     const downloads = [
@@ -143,10 +145,10 @@ export default function NewZealand() {
                 <div className="Country-container-section mt-4">
                     <div className="country-list">
                         {countries.slice(0, showAll ? countries.length : 6).map((country, index) => (
-                            <div key={index} className="country-item">
+                            <Link key={index} to={country.path} className="country-item">
                                 <span className="country-list-name-section ms-2">{country.name}</span>
                                 <img src={country.flag} alt={`${country.name} Flag`} className="country-flag" />
-                            </div>
+                            </Link>
                         ))}
 
                         <div className="toggle-button">

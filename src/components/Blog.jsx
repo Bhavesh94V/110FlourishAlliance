@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import '../assets/styles/Blog.css';
-import img1 from '../assets/imgs/Blog/img1.jpg';
-import img2 from '../assets/imgs/Blog/img2.jpg';
-import img3 from '../assets/imgs/Blog/img3.jpg';
+import blogimg1 from "../assets/imgs/Blog/blogimg1.jpg";
+import blogimg2 from "../assets/imgs/Blog/blogimg2.jpg";
+import blogimg3 from "../assets/imgs/Blog/blogimg3.jpg";
 import bgImage from "../assets/imgs/AboutArea/bginner.jpg";
 import { Link } from 'react-router-dom';
 import WOW from 'wowjs';
@@ -19,21 +19,21 @@ export default function Blog() {
 
     const blogPosts = [
         {
-            img: img1,
+            img: blogimg1,
             date: new Date().toLocaleDateString(),
             title: 'Opportunities for Global Education',
             description: 'Explore how studying or working abroad can transform lives, offering academic success and global career growth through immersive experiences and access to world-class education and professional networks.',
             link: '/Blog/1'
         },
         {
-            img: img2,
+            img: blogimg2,
             date: new Date().toLocaleDateString(),
             title: 'Success with Study Visas',
             description: 'Australia is a leading destination for professionals, students, and families, offering a strong economy, excellent healthcare, high-quality education, and a welcoming culture, making it perfect for international opportunities.',
             link: '/Blog/2'
         },
         {
-            img: img3,
+            img: blogimg3,
             date: new Date().toLocaleDateString(),
             title: 'Pathway to Global Education',
             description: 'Australia is a top choice for Indian students seeking quality education and vibrant lifestyles, attracting thousands each year with its excellent institutions, dynamic multicultural environment, and career growth opportunities.',
