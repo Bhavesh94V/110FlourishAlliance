@@ -90,11 +90,11 @@ export default function Navbar() {
                     </div>
                     <div className="col-lg-4 text-center text-lg-end">
                         <div className="d-inline-flex align-items-center" style={{ height: "45px" }}>
-                            <a href="#" className="text-white me-2 animate__animated animate__zoomIn">Help</a>
+                            <Link to='/ContactPage' className="text-white me-2 animate__animated animate__zoomIn">Help</Link>
                             <small className="text-white">/</small>
-                            <a href="#" className="text-white mx-2 animate__animated animate__zoomIn">Support</a>
+                            <Link to='/BookNowPage' className="text-white mx-2 animate__animated animate__zoomIn">Appointment</Link>
                             <small className="text-white">/</small>
-                            <a href="#" className="text-white ms-2 animate__animated animate__zoomIn">Contact</a>
+                            <Link to='/ContactPage' className="text-white ms-2 animate__animated animate__zoomIn">Contact</Link>
                         </div>
                     </div>
                 </div>

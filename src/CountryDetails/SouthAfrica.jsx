@@ -36,7 +36,7 @@ export default function SouthAfrica() {
       <div className="bg-breadcrumb">
         <div className="breadcrumb-image">
           <div className="overlay-gradient"></div>
-          <img src="Images/Canada-Background.jpg" alt="Canada Background" className="breadcrumb-bg" />
+          <img src={countryImages.southafrica1} alt="Canada Background" className="breadcrumb-bg" />
         </div>
         <div className="breadcrumb-text">
           <h3>Welcome to South Africa</h3>
@@ -66,7 +66,7 @@ export default function SouthAfrica() {
               With top-tier universities, a flourishing business environment, and stunning natural landscapes, South Africa is an ideal place for those seeking growth, success, and a high quality of life.
             </p>
             <div className="country-section-image">
-              <img src="/Images/SouthAfricaSection.jpg" alt="South Africa Immigration" className='img-fluid' />
+              <img src={countryImages.southafrica2} alt="South Africa Immigration" className='img-fluid' />
             </div>
           </div>
 
@@ -132,7 +132,7 @@ export default function SouthAfrica() {
                 </ul>
               </div>
               <div className="university-image">
-                <img src="/Images/student-girl.jpg" alt="Student in South Africa" className='img-fluid' />
+                <img src={countryImages.southafrica3} alt="Student in South Africa" className='img-fluid' />
               </div>
             </div>
           </div>
@@ -180,7 +180,7 @@ export default function SouthAfrica() {
           </div>
 
           <div className="approval-card">
-            <img className="background-pattern" src="/Images/patterns.jpg" alt="Background Pattern" />
+            <img className="background-pattern" src={countryImages.southafrica4} alt="Background Pattern" />
             <div className="card-content">
 
               <h3>Your Approval, Just One Click Away!</h3>

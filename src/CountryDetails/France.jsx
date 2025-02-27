@@ -36,7 +36,7 @@ export default function France() {
       <div className="bg-breadcrumb">
         <div className="breadcrumb-image">
           <div className="overlay-gradient"></div>
-          <img src="Images/Canada-Background.jpg" alt="Canada Background" className="breadcrumb-bg" />
+          <img src={countryImages.france1} alt="Canada Background" className="breadcrumb-bg" />
         </div>
         <div className="breadcrumb-text">
           <h3>Welcome to France</h3>
@@ -60,7 +60,7 @@ export default function France() {
             <p>Our expert immigration consultants are here to guide you through every step of the application process. From visa assistance to settling in, we ensure your transition to France is seamless and stress-free.</p>
             <p>With a rich history, diverse cultural experiences, and strong career prospects, France is an ideal destination for individuals and families seeking a fresh start.</p>
             <div className="country-section-image">
-              <img src="/Images/France-Section.jpg" alt="France Immigration" className='img-fluid' />
+              <img src={countryImages.france2} alt="France Immigration" className='img-fluid' />
             </div>
           </div>
 
@@ -128,7 +128,7 @@ export default function France() {
               </div>
               <div className="university-image">
                 <img
-                  src="/Images/student-girl.jpg"
+                  src={countryImages.france3}
                   alt="Student in France"
                   className='img-fluid'
                 />
@@ -179,7 +179,7 @@ export default function France() {
           </div>
 
           <div className="approval-card">
-            <img className="background-pattern" src="/Images/patterns.jpg" alt="Background Pattern" />
+            <img className="background-pattern" src={countryImages.france4} alt="Background Pattern" />
             <div className="card-content">
 
               <h3>Your Approval, Just One Click Away!</h3>

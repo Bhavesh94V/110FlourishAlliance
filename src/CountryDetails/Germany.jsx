@@ -36,7 +36,7 @@ export default function Germany() {
       <div className="bg-breadcrumb">
         <div className="breadcrumb-image">
           <div className="overlay-gradient"></div>
-          <img src="Images/Canada-Background.jpg" alt="Canada Background" className="breadcrumb-bg" />
+          <img src={countryImages.germany1} alt="Canada Background" className="breadcrumb-bg" />
         </div>
         <div className="breadcrumb-text">
           <h3>Welcome to Germany</h3>
@@ -67,7 +67,7 @@ export default function Germany() {
               With its rich history, vibrant culture, and strong career prospects, Germany is an ideal destination for individuals and families seeking a fresh start. Explore its dynamic cities, breathtaking landscapes, and unparalleled quality of life.
             </p>
             <div className="country-section-image">
-              <img src="/Images/Germany-Section.jpg" alt="Germany Immigration" className='img-fluid' />
+              <img src={countryImages.germany2} className='img-fluid' />
             </div>
           </div>
 
@@ -136,7 +136,7 @@ export default function Germany() {
               </div>
               <div className="university-image">
                 <img
-                  src="/Images/student-girl.jpg"
+                  src={countryImages.germany3}
                   alt="Student in Germany"
                   className='img-fluid'
                 />
@@ -187,7 +187,7 @@ export default function Germany() {
           </div>
 
           <div className="approval-card">
-            <img className="background-pattern" src="/Images/patterns.jpg" alt="Background Pattern" />
+            <img className="background-pattern" src={countryImages.germany4} alt="Background Pattern" />
             <div className="card-content">
 
               <h3>Your Approval, Just One Click Away!</h3>

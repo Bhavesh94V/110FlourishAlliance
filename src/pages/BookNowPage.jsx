@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Clock, MapPin, Mail, Phone, Link } from 'lucide-react';
+import { Clock, MapPin, Mail, Phone } from 'lucide-react';
 import "../assets/styles/BookNowPage.css";
 import Footer from '../components/Footer';
 import PlaneBg from '../BlogDetails/paperplane.png'
 import BookNowPageFooter from '../assets/imgs/Pages/BookNowPageFooter.png'
 import BookNowForm from './BookNowForm';
+import { Link } from 'react-router-dom';
 
 export default function BookNowPage() {
 
@@ -16,14 +17,7 @@ export default function BookNowPage() {
 
 
       <div>
-        <div class="bg-[#B21E24] lg:mt-[109px] md:mt-[50px] py-5 bg-custom mt-custom"
-          style={{
-            backgroundImage: `url(${PlaneBg})`,
-            backgroundRepeat: 'no-repeat',
-            backgroundPositionX: '90%',
-            backgroundSize: 'contain',
-            animation: 'bgMove 2s infinite alternate ease-in-out'
-          }}
+        <div class="bg-[#B21E24] bg-wrapper-image lg:mt-[109px] md:mt-[50px] py-5 bg-custom mt-custom"
         >
           <div class="container mx-auto text-white px-5">
             <div class="flex flex-col items-start justify-between">

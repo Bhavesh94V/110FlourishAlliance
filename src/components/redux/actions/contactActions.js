@@ -7,6 +7,10 @@ export const SUBMIT_APPOINTMENT_REQUEST = "SUBMIT_APPOINTMENT_REQUEST";
 export const SUBMIT_APPOINTMENT_SUCCESS = "SUBMIT_APPOINTMENT_SUCCESS";
 export const SUBMIT_APPOINTMENT_FAILURE = "SUBMIT_APPOINTMENT_FAILURE";
 
+export const SUBMIT_POPUP_FORM_REQUEST = "SUBMIT_POPUP_FORM_REQUEST";
+export const SUBMIT_POPUP_FORM_SUCCESS = "SUBMIT_POPUP_FORM_SUCCESS";
+export const SUBMIT_POPUP_FORM_FAILURE = "SUBMIT_POPUP_FORM_FAILURE";
+
 export const submitContactRequest = (formData) => ({
     type: SUBMIT_CONTACT_REQUEST,
     payload: formData,
@@ -54,5 +58,22 @@ export const submitAppointmentSuccess = (message) => ({
 
 export const submitAppointmentFailure = (error) => ({
     type: SUBMIT_APPOINTMENT_FAILURE,
+    payload: error,
+});
+
+
+
+export const submitPopUpFormRequest = (formData) => ({
+    type: SUBMIT_POPUP_FORM_REQUEST,
+    payload: formData,
+});
+
+export const submitPopUpFormSuccess = (message) => ({
+    type: SUBMIT_POPUP_FORM_SUCCESS,
+    payload: message,
+});
+
+export const submitPopUpFormFailure = (error) => ({
+    type: SUBMIT_POPUP_FORM_FAILURE,
     payload: error,
 });

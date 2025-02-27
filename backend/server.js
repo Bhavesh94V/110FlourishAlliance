@@ -52,6 +52,7 @@ const transporter = nodemailer.createTransport({
     },
 });
 
+
 // Homepage PopUp Form
 app.post("/send-email", async (req, res) => {
     const { name, surname, email, contact, category } = req.body;

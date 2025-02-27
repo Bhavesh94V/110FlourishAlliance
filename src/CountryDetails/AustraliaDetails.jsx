@@ -36,7 +36,7 @@ export default function AustraliaDetails() {
             <div className="bg-breadcrumb">
                 <div className="breadcrumb-image">
                     <div className="overlay-gradient"></div>
-                    <img src="Images/Canada-Background.jpg" alt="Canada Background" className="breadcrumb-bg" />
+                    <img src={countryImages.australia1} alt="Canada Background" className="breadcrumb-bg" />
                 </div>
                 <div className="breadcrumb-text">
                     <h3>Welcome to Australia</h3>
@@ -60,7 +60,7 @@ export default function AustraliaDetails() {
                         <p>Our dedicated immigration consultants are here to assist you in navigating the application process seamlessly. Whether you aim to study, work, or settle permanently, we ensure that your transition is smooth and stress-free.</p>
                         <p>From visa applications to finding a place to live, we provide end-to-end support, making your move to Australia as easy as possible.</p>
                         <div className="country-section-image">
-                            <img src="/Images/Australia-Section.jpg" alt="Australia Immigration" className='img-fluid' />
+                            <img src={countryImages.australia2} alt="Australia Immigration" className='img-fluid' />
                         </div>
                     </div>
 
@@ -127,7 +127,7 @@ export default function AustraliaDetails() {
                             </div>
                             <div className="university-image">
                                 <img
-                                    src="/Images/student-girl.jpg"
+                                    src={countryImages.australia3}
                                     alt="Student"
                                     className='img-fluid'
                                 />
@@ -178,7 +178,7 @@ export default function AustraliaDetails() {
                     </div>
 
                     <div className="approval-card">
-                        <img className="background-pattern" src="/Images/patterns.jpg" alt="Background Pattern" />
+                        <img className="background-pattern" src={countryImages.australia4} alt="Background Pattern" />
                         <div className="card-content">
 
                             <h3>Your Approval, Just One Click Away!</h3>

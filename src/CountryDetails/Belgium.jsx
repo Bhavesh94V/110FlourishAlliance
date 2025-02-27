@@ -36,7 +36,7 @@ export default function Belgium() {
       <div className="bg-breadcrumb">
         <div className="breadcrumb-image">
           <div className="overlay-gradient"></div>
-          <img src="Images/Canada-Background.jpg" alt="Canada Background" className="breadcrumb-bg" />
+          <img src={countryImages.belgium1} alt="Canada Background" className="breadcrumb-bg" />
         </div>
         <div className="breadcrumb-text">
           <h3>Welcome to Belgium</h3>
@@ -66,7 +66,7 @@ export default function Belgium() {
               With its rich history, multilingual culture, and strategic location in the heart of Europe, Belgium is the perfect place for individuals and families seeking new opportunities. Explore its charming cities, diverse job market, and excellent quality of life.
             </p>
             <div className="country-section-image">
-              <img src="/Images/Belgium-Section.jpg" alt="Belgium Immigration" className='img-fluid' />
+              <img src={countryImages.belgium2} alt="Belgium Immigration" className='img-fluid' />
             </div>
           </div>
 
@@ -133,7 +133,7 @@ export default function Belgium() {
               </div>
               <div className="university-image">
                 <img
-                  src="/Images/student-girl.jpg"
+                  src={countryImages.belgium3}
                   alt="Student in Belgium"
                   className='img-fluid'
                 />
@@ -184,7 +184,7 @@ export default function Belgium() {
           </div>
 
           <div className="approval-card">
-            <img className="background-pattern" src="/Images/patterns.jpg" alt="Background Pattern" />
+            <img className="background-pattern" src={countryImages.belgium4} alt="Background Pattern" />
             <div className="card-content">
 
               <h3>Your Approval, Just One Click Away!</h3>

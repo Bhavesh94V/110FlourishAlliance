@@ -36,7 +36,7 @@ export default function Italy() {
             <div className="bg-breadcrumb">
                 <div className="breadcrumb-image">
                     <div className="overlay-gradient"></div>
-                    <img src="Images/Canada-Background.jpg" alt="Canada Background" className="breadcrumb-bg" />
+                    <img src={countryImages.italy1} alt="Canada Background" className="breadcrumb-bg" />
                 </div>
                 <div className="breadcrumb-text">
                     <h3>Welcome to Italy</h3>
@@ -66,7 +66,7 @@ export default function Italy() {
                             With its historic cities, stunning landscapes, and excellent quality of life, Italy is an ideal place for individuals and families seeking new opportunities. Discover its vibrant lifestyle, world-famous cuisine, and welcoming atmosphere.
                         </p>
                         <div className="country-section-image">
-                            <img src="/Images/Italy-Section.jpg" alt="Italy Immigration" className='img-fluid' />
+                            <img src={countryImages.italy2} alt="Italy Immigration" className='img-fluid' />
                         </div>
                     </div>
 
@@ -133,7 +133,7 @@ export default function Italy() {
                             </div>
                             <div className="university-image">
                                 <img
-                                    src="/Images/student-girl.jpg"
+                                    src={countryImages.italy3}
                                     alt="Student in Italy"
                                     className='img-fluid'
                                 />
@@ -184,7 +184,7 @@ export default function Italy() {
                     </div>
 
                     <div className="approval-card">
-                        <img className="background-pattern" src="/Images/patterns.jpg" alt="Background Pattern" />
+                        <img className="background-pattern" src={countryImages.italy4} alt="Background Pattern" />
                         <div className="card-content">
 
                             <h3>Your Approval, Just One Click Away!</h3>

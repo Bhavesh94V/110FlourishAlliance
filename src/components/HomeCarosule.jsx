@@ -5,6 +5,7 @@ import img2 from '../assets/imgs/HomeSlider/img2.jpg';
 import img3 from '../assets/imgs/HomeSlider/img3.jpg';
 import WOW from 'wowjs';
 import 'animate.css';
+import { Link } from 'react-router-dom';
 
 export default function HomeCarousel() {
 
@@ -16,7 +17,7 @@ export default function HomeCarousel() {
             subHeading: "Explore new opportunities with expert guidance.",
             paragraph: "At Flourish Alliance Immigration, we specialize in providing tailored solutions for study visas, work permits, and permanent residency. Let us help you open doors to a brighter future.",
             buttonText: "Explore Our Services",
-            link: "#services"
+            link: "/CareersPage"
         },
         {
             imgSrc: img2,
@@ -25,7 +26,7 @@ export default function HomeCarousel() {
             subHeading: "Professional support for a seamless visa process.",
             paragraph: "Our team helps you navigate the complexities of work visa applications with confidence. Whether you're looking to work abroad or transition into permanent residency, we've got you covered.",
             buttonText: "Get Started",
-            link: "#services"
+            link: "/BlogPage"
         },
         {
             imgSrc: img3,
@@ -34,7 +35,7 @@ export default function HomeCarousel() {
             subHeading: "The first step toward global education starts here.",
             paragraph: "Study abroad with the support of our expert consultants. From choosing the right course to visa processing, we ensure a smooth path to your academic goals.",
             buttonText: "Start Your Journey",
-            link: "#services"
+            link: "/service/study-visa"
         }
     ];
 
@@ -93,9 +94,9 @@ export default function HomeCarousel() {
                                             {slide.paragraph}
                                         </p>
                                         <div className="d-flex align-items-center justify-content-center">
-                                            <a className="btn-hover-bg btn Discovernow rounded-pill text-white py-3 px-5" href={slide.link}>
+                                            <Link className="btn-hover-bg btn Discovernow rounded-pill text-white py-3 px-5" to={slide.link}>
                                                 {slide.buttonText}
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>

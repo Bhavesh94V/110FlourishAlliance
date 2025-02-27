@@ -36,7 +36,7 @@ export default function UK() {
             <div className="bg-breadcrumb">
                 <div className="breadcrumb-image">
                     <div className="overlay-gradient"></div>
-                    <img src="Images/Canada-Background.jpg" alt="Canada Background" className="breadcrumb-bg" />
+                    <img src={countryImages.uk1} alt="Canada Background" className="breadcrumb-bg" />
                 </div>
                 <div className="breadcrumb-text">
                     <h3>Welcome to the United Kingdom</h3>
@@ -66,7 +66,7 @@ export default function UK() {
                             With its rich cultural heritage, diverse job market, and global connectivity, the UK is an ideal place for individuals and families looking for a fresh start. Experience its vibrant cities, historic landmarks, and excellent public services.
                         </p>
                         <div className="country-section-image">
-                            <img src="/Images/UKSection.jpg" alt="UK Immigration" className='img-fluid' />
+                            <img src={countryImages.uk2} alt="UK Immigration" className='img-fluid' />
                         </div>
                     </div>
 
@@ -133,7 +133,7 @@ export default function UK() {
                             </div>
                             <div className="university-image">
                                 <img
-                                    src="/Images/student-girl.jpg"
+                                    src={countryImages.uk3}
                                     alt="Student in the UK"
                                     className='img-fluid'
                                 />
@@ -183,7 +183,7 @@ export default function UK() {
                     </div>
 
                     <div className="approval-card">
-                        <img className="background-pattern" src="/Images/patterns.jpg" alt="Background Pattern" />
+                        <img className="background-pattern" src={countryImages.uk4} alt="Background Pattern" />
                         <div className="card-content">
 
                             <h3>Your Approval, Just One Click Away!</h3>

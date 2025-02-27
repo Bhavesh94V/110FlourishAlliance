@@ -36,7 +36,7 @@ export default function USA() {
       <div className="bg-breadcrumb">
         <div className="breadcrumb-image">
           <div className="overlay-gradient"></div>
-          <img src="Images/Canada-Background.jpg" alt="Canada Background" className="breadcrumb-bg" />
+          <img src={countryImages.usa1} alt="Canada Background" className="breadcrumb-bg" />
         </div>
         <div className="breadcrumb-text">
           <h3>Welcome to the United States</h3>
@@ -66,7 +66,7 @@ export default function USA() {
               With its cultural diversity, cutting-edge industries, and high standard of living, the USA is the perfect place to build a bright future. Explore its iconic cities, leading job markets, and outstanding quality of life.
             </p>
             <div className="country-section-image">
-              <img src="/Images/USASection.jpg" alt="USA Immigration" className='img-fluid' />
+              <img src={countryImages.usa2} alt="USA Immigration" className='img-fluid' />
             </div>
           </div>
 
@@ -133,7 +133,7 @@ export default function USA() {
               </div>
               <div className="university-image">
                 <img
-                  src="/Images/student-girl.jpg"
+                  src={countryImages.usa3}
                   alt="Student in the USA"
                   className='img-fluid'
                 />
@@ -186,7 +186,7 @@ export default function USA() {
           </div>
 
           <div className="approval-card">
-            <img className="background-pattern" src="/Images/patterns.jpg" alt="Background Pattern" />
+            <img className="background-pattern" src={countryImages.usa4} alt="Background Pattern" />
             <div className="card-content">
 
               <h3>Your Approval, Just One Click Away!</h3>

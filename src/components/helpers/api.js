@@ -23,3 +23,7 @@ export const submitEligibilityForm = async (formData) => {
 export const submitAppointmentForm = async (formData) => {
     return await axios.post("http://localhost:5000/api/book-appointment", formData);
 };
+
+export const submitPopUpForm = async (formData) => {
+    return await axios.post("http://localhost:5000/send-email", formData);
+};

@@ -36,7 +36,7 @@ export default function Brazil() {
             <div className="bg-breadcrumb">
                 <div className="breadcrumb-image">
                     <div className="overlay-gradient"></div>
-                    <img src="Images/Canada-Background.jpg" alt="Canada Background" className="breadcrumb-bg" />
+                    <img src={countryImages.brazil1} alt="Canada Background" className="breadcrumb-bg" />
                 </div>
                 <div className="breadcrumb-text">
                     <h3>Welcome to Brazil</h3>
@@ -66,7 +66,7 @@ export default function Brazil() {
                             With world-class universities, a high quality of life, and a strong business ecosystem, Brazil is an ideal place for those seeking growth and success. Enjoy its lively cities, scenic landscapes, and warm, inclusive society.
                         </p>
                         <div className="country-section-image">
-                            <img src="/Images/BrazilSection.jpg" alt="Brazil Immigration" className='img-fluid' />
+                            <img src={countryImages.brazil2} alt="Brazil Immigration" className='img-fluid' />
                         </div>
                     </div>
 
@@ -133,7 +133,7 @@ export default function Brazil() {
                             </div>
                             <div className="university-image">
                                 <img
-                                    src="/Images/student-girl.jpg"
+                                    src={countryImages.brazil3}
                                     alt="Student in Brazil"
                                     className='img-fluid'
                                 />
@@ -184,7 +184,7 @@ export default function Brazil() {
                     </div>
 
                     <div className="approval-card">
-                        <img className="background-pattern" src="/Images/patterns.jpg" alt="Background Pattern" />
+                        <img className="background-pattern" src={countryImages.brazil4} alt="Background Pattern" />
                         <div className="card-content">
 
                             <h3>Your Approval, Just One Click Away!</h3>

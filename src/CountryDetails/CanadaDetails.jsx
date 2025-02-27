@@ -36,7 +36,7 @@ export default function CanadaDetails() {
       <div className="bg-breadcrumb">
         <div className="breadcrumb-image">
           <div className="overlay-gradient"></div>
-          <img src="Images/Canada-Background.jpg" alt="Canada Background" className="breadcrumb-bg" />
+          <img src={countryImages.canada1} alt="Canada Background" className="breadcrumb-bg" />
         </div>
         <div className="breadcrumb-text">
           <h3>Welcome to Canada</h3>
@@ -60,7 +60,7 @@ export default function CanadaDetails() {
             <p>Our expert immigration consultants provide comprehensive support, helping you navigate the complex immigration process. Whether you're seeking to work, study, or reunite with family, we ensure that your application is handled with care and efficiency.</p>
             <p>From the application process to settling into your new home, we’re with you every step of the way, ensuring that your journey to Canada is smooth and stress-free.</p>
             <div className="country-section-image">
-              <img src="" alt="Canada Immigration" className='img-fluid' />
+              <img src={countryImages.canada3} alt="Canada Immigration" className='img-fluid max-h-[600px]' />
             </div>
           </div>
 
@@ -125,7 +125,7 @@ export default function CanadaDetails() {
               </div>
               <div className="university-image">
                 <img
-                  src="/Images/student-girl.jpg"
+                  src={countryImages.canada2}
                   alt="Student"
                   className='img-fluid'
                 />
@@ -176,7 +176,7 @@ export default function CanadaDetails() {
           </div>
 
           <div className="approval-card">
-            <img className="background-pattern" src="/Images/patterns.jpg" alt="Background Pattern" />
+            <img className="background-pattern" src={countryImages.canada4} alt="Background Pattern" />
             <div className="card-content">
 
               <h3>Your Approval, Just One Click Away!</h3>

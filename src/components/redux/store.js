@@ -1,7 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import createSagaMiddleware from "redux-saga";
 import contactReducer from "./reducers/contactReducer";
-import { watchContactSaga, watchEligibilitySaga, watchAppointmentSaga } from "./sagas/contactSaga";
+
+import {
+    watchContactSaga,
+    watchEligibilitySaga,
+    watchAppointmentSaga,
+    watchPopUpFormSubmission
+} from "./sagas/contactSaga";
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -10,6 +16,7 @@ const store = configureStore({
         contact: contactReducer,
         eligibility: contactReducer,
         appointment: contactReducer,
+        popUp: contactReducer,
     },
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware().concat(sagaMiddleware),
@@ -18,5 +25,6 @@ const store = configureStore({
 sagaMiddleware.run(watchContactSaga);
 sagaMiddleware.run(watchEligibilitySaga);
 sagaMiddleware.run(watchAppointmentSaga);
+sagaMiddleware.run(watchPopUpFormSubmission);
 
 export default store;

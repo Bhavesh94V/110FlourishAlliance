@@ -36,7 +36,7 @@ export default function Japan() {
       <div className="bg-breadcrumb">
         <div className="breadcrumb-image">
           <div className="overlay-gradient"></div>
-          <img src="Images/Canada-Background.jpg" alt="Canada Background" className="breadcrumb-bg" />
+          <img src={countryImages.japan1} alt="Canada Background" className="breadcrumb-bg" />
         </div>
         <div className="breadcrumb-text">
           <h3>Welcome to Japan</h3>
@@ -66,7 +66,7 @@ export default function Japan() {
               With its world-class education, advanced industries, and excellent quality of life, Japan is an ideal place for individuals and families looking for new opportunities. Experience its vibrant cities, innovation-driven economy, and unique cultural traditions.
             </p>
             <div className="country-section-image">
-              <img src="/Images/JapanSection.jpg" alt="Japan Immigration" className='img-fluid' />
+              <img src={countryImages.japan2} alt="Japan Immigration" className='img-fluid' />
             </div>
           </div>
 
@@ -133,7 +133,7 @@ export default function Japan() {
               </div>
               <div className="university-image">
                 <img
-                  src="/Images/student-girl.jpg"
+                  src={countryImages.japan3}
                   alt="Student in Japan"
                   className='img-fluid'
                 />
@@ -184,7 +184,7 @@ export default function Japan() {
           </div>
 
           <div className="approval-card">
-            <img className="background-pattern" src="/Images/patterns.jpg" alt="Background Pattern" />
+            <img className="background-pattern" src={countryImages.japan4} alt="Background Pattern" />
             <div className="card-content">
 
               <h3>Your Approval, Just One Click Away!</h3>

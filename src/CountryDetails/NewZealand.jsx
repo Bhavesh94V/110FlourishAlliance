@@ -36,7 +36,7 @@ export default function NewZealand() {
             <div className="bg-breadcrumb">
                 <div className="breadcrumb-image">
                     <div className="overlay-gradient"></div>
-                    <img src="Images/Canada-Background.jpg" alt="Canada Background" className="breadcrumb-bg" />
+                    <img src={countryImages.newzeland1} alt="Canada Background" className="breadcrumb-bg" />
                 </div>
                 <div className="breadcrumb-text">
                     <h3>Welcome to New Zealand</h3>
@@ -66,7 +66,7 @@ export default function NewZealand() {
                             With breathtaking landscapes, a welcoming culture, and a thriving job market, New Zealand is the perfect place for individuals and families seeking a fresh start. Explore its vibrant cities, outdoor adventures, and endless possibilities.
                         </p>
                         <div className="country-section-image">
-                            <img src="/Images/NewZealand-Section.jpg" alt="New Zealand Immigration" className='img-fluid' />
+                            <img src={countryImages.newzeland2} alt="New Zealand Immigration" className='img-fluid' />
                         </div>
                     </div>
 
@@ -133,7 +133,7 @@ export default function NewZealand() {
                             </div>
                             <div className="university-image">
                                 <img
-                                    src="/Images/student-girl.jpg"
+                                    src={countryImages.newzeland3}
                                     alt="Student in New Zealand"
                                     className='img-fluid'
                                 />
@@ -184,7 +184,7 @@ export default function NewZealand() {
                     </div>
 
                     <div className="approval-card">
-                        <img className="background-pattern" src="/Images/patterns.jpg" alt="Background Pattern" />
+                        <img className="background-pattern" src={countryImages.newzeland4} alt="Background Pattern" />
                         <div className="card-content">
 
                             <h3>Your Approval, Just One Click Away!</h3>

@@ -401,3 +401,30 @@
         gap: 10px;
     }
 }
+
+
+.bookNowPage .bg-wrapper-image {
+    background-image: url('../imgs/About-us/paperplane.png');
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-size: contain;
+    animation: bgMove 2s infinite alternate ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .bg-wrapper-image {
+        margin-top: 20px;
+        background-image: none !important;
+    }
+}
+
+/* ✅ Animation for smooth movement */
+@keyframes bgMove {
+    from {
+        background-position-x: 85%;
+    }
+
+    to {
+        background-position-x: 95%;
+    }
+}

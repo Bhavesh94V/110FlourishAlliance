@@ -4,13 +4,24 @@ import {
     SUBMIT_CONTACT_REQUEST,
     submitContactSuccess,
     submitContactFailure,
+
     submitEligibilitySuccess,
     submitEligibilityFailure,
+
     SUBMIT_APPOINTMENT_REQUEST,
     submitAppointmentSuccess,
-    submitAppointmentFailure
+    submitAppointmentFailure,
+
+    SUBMIT_POPUP_FORM_REQUEST,
+    submitPopUpFormSuccess,
+    submitPopUpFormFailure
 } from "../actions/contactActions";
-import { submitEligibilityForm, submitAppointmentForm } from "../../helpers/api";
+
+import {
+    submitEligibilityForm,
+    submitAppointmentForm,
+    submitPopUpForm
+} from "../../helpers/api";
 
 function* submitContactSaga(action) {
     try {
@@ -37,6 +48,19 @@ function* submitAppointmentSaga(action) {
     } catch (error) {
         yield put(submitAppointmentFailure("Failed to book appointment."));
     }
+}
+
+function* handleSubmitPopUpForm(action) {
+    try {
+        const response = yield call(submitPopUpForm, action.payload);
+        yield put(submitPopUpFormSuccess("Form submitted successfully!"));
+    } catch (error) {
+        yield put(submitPopUpFormFailure("Failed to submit form. Try again."));
+    }
+}
+
+export function* watchPopUpFormSubmission() {
+    yield takeLatest(SUBMIT_POPUP_FORM_REQUEST, handleSubmitPopUpForm);
 }
 
 export function* watchContactSaga() {

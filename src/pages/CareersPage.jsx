@@ -3,7 +3,6 @@ import '../assets/styles/Opportunity.css'
 import bgImage from '../assets/imgs/AboutArea/bginner.jpg';
 import { Link, Links } from 'react-router-dom';
 import LogosSection from '../components/LogosSection ';
-import Argentina from '../assets/imgs/Pages/Country-Images/Country-Images/Argentina.jpg';
 import Australia from '../assets/imgs/Pages/Country-Images/Country-Images/Australia.png';
 import Belgium from '../assets/imgs/Pages/Country-Images/Country-Images/Belgium.png';
 import Brazil from '../assets/imgs/Pages/Country-Images/Country-Images/brazil.jpg';
@@ -17,6 +16,7 @@ import Iceland from '../assets/imgs/Pages/Country-Images/Country-Images/Iceland.
 import India from '../assets/imgs/Pages/Country-Images/Country-Images/india.jpg';
 import Ireland from '../assets/imgs/Pages/Country-Images/Country-Images/Ireland.png';
 import Italy from '../assets/imgs/Pages/Country-Images/Country-Images/Italy.png';
+import opportunity from '../CountryDetails/CountryDetailsImgs/oppourtinity.jpg';
 import Luxembourg from '../assets/imgs/Pages/Country-Images/Country-Images/Luxembourg.png';
 import Peru from '../assets/imgs/Pages/Country-Images/Country-Images/Peru.png';
 import Colombia from '../assets/imgs/Pages/Country-Images/Country-Images/Colombia.png';
@@ -30,8 +30,9 @@ import NewZealand from '../assets/imgs/Pages/Country-Images/Country-Images/NewZe
 import SouthAfrica from '../assets/imgs/Pages/Country-Images/Country-Images/SouthAfrica.jpg';
 import chooseimgbg from '../ServicesDetails/Service-MiniSlider-Imgs/chooseimgbg.png'
 import { FaUserCheck, FaFileAlt, FaHandHoldingUsd, FaClipboardCheck, FaChartLine, FaHeadset } from "react-icons/fa";
-import Footer from '../components/Footer';
+// import Footer from '../components/Footer';
 import EligibilityForm from './EligibilityForm';
+import PagesImage from '../assets/imgs/Pages/PagesImage';
 
 
 
@@ -62,6 +63,7 @@ export default function CareersPage() {
     Brazil: Brazil,
     NewZealand: NewZealand,
     Italy: Italy,
+    opportunity: opportunity
   };
 
   const locations = [
@@ -76,38 +78,6 @@ export default function CareersPage() {
 
   const [selectedLocation, setSelectedLocation] = useState(locations[0]);
 
-  const [formData, setFormData] = useState({
-    firstName: "",
-    middleName: "",
-    lastName: "",
-    contact: "",
-    email: "",
-    country: "",
-    enquiry: "",
-    education: "",
-    dob: "",
-    sex: "",
-    cv: null,
-  });
-
-  const countries = ["Canada", "Australia", "USA", "UK", "Germany", "Paris", "New Zealand"];
-  const enquiries = ["Study Visa", "Work Visa", "Business Visa", "PR", "Tourist Visa", "Permanent Residency"];
-  const educations = ["High School", "Diploma", "Bachelor's", "Master's"];
-
-  const handleChange = (e) => {
-    const { name, value, type } = e.target;
-    if (type === "file") {
-      setFormData({ ...formData, [name]: e.target.files[0] });
-    } else {
-      setFormData({ ...formData, [name]: value });
-    }
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form Submitted", formData);
-    alert("Thank you! We will get back to you shortly.");
-  };
 
 
   return (
@@ -120,7 +90,7 @@ export default function CareersPage() {
 
             <div className="overlay-gradient"></div>
 
-            <img src='https://img.freepik.com/free-photo/career-employment-job-work-concept_53876-123876.jpg?t=st=1739191089~exp=1739194689~hmac=b6e0ede2df067e7a614005b1d6811c9290644885505ea0101a5a2a93b1641b50&w=1800' alt="Breadcrumb Background" className="breadcrumb-bg" />
+            <img src={countryImages.opportunity} alt="Breadcrumb Background" className="breadcrumb-bg" />
 
           </div>
           <div className="breadcrumb-text">
@@ -129,7 +99,7 @@ export default function CareersPage() {
               Discover a world of possibilities with our dedicated team. <br />
               Your dreams, our mission—together we create success.
             </p>
-            <Link to="/ContactPage" className="contact-button">
+            <Link to="/ContactPage" className="contact-button bg-[#B21E24] p-2 px-3 rounded-full">
               Get in Touch with Us Today!
             </Link>
           </div>
@@ -158,11 +128,11 @@ export default function CareersPage() {
               <div class="container">
                 <div class="row align-items-center">
                   <div class="col-lg-6 image-container">
-                    <div class="main-image">
-                      <img src="https://html.kodesolution.com/2024/visago-php/images/resource/about1-1.jpg" className='rounded-b-full border-5 border-danger' alt="Main Image" />
+                    <div class="main-image max-w-[500px]">
+                      <img src={PagesImage.cardsPassport} className='rounded-b-full border-5 max-h-[600px] w-full border-danger' alt="Main Image" />
                     </div>
                     <div class="overlay-image">
-                      <img src="https://img.freepik.com/free-photo/green-cards-passports-flat-lay_23-2149828138.jpg?t=st=1739272243~exp=1739275843~hmac=a8d0c263d752fb2c346854f0b82fb3e11a3aeede66d1d473b257d79d36616017&w=740" className='rounded-t-full border-5' alt="Small Image" />
+                      <img src={PagesImage.visago} className='rounded-t-full border-5' alt="Small Image" />
                     </div>
                     <div class="visa-success">
                       <div class="visa-circle">100%<br />Proven Visa Success Rate</div>
@@ -251,140 +221,8 @@ export default function CareersPage() {
 
       </div>
 
-
-
-      {/* <div className='flex flex-col lg:flex-row bg-white lg:px-5 pb-5'>
-
-
-
-
-        <div className="form-container mt-4">
-          <h2 className="form-title text-danger text-start">Eligibility Criteria :</h2>
-          <form onSubmit={handleSubmit} className="form">
-            <div className="form-row">
-              <div className="form-group">
-                <label>First Name : </label>
-                <input type="text" name="firstName" onChange={handleChange} required />
-              </div>
-              <div className="form-group">
-                <label>Middle Name : </label>
-                <input type="text" name="middleName" onChange={handleChange} />
-              </div>
-              <div className="form-group">
-                <label>Last Name : </label>
-                <input type="text" name="lastName" onChange={handleChange} required />
-              </div>
-            </div>
-
-            <div className="form-row">
-              <div className="form-group">
-                <label>Contact No : </label>
-                <input type="text" name="contact" onChange={handleChange} required />
-              </div>
-              <div className="form-group">
-                <label>Email ID : </label>
-                <input type="email" name="email" onChange={handleChange} required />
-              </div>
-            </div>
-
-            <div className="form-row">
-              <div className="form-group">
-                <label>Country : </label>
-                <select name="country" onChange={handleChange} required>
-                  <option value="">Select Country</option>
-                  {countries.map((c) => (
-                    <option key={c} value={c}>{c}</option>
-                  ))}
-                </select>
-              </div>
-              <div className="form-group">
-                <label>Enquiry Type : </label>
-                <select name="enquiry" onChange={handleChange} required>
-                  <option value="">Select Enquiry Type</option>
-                  {enquiries.map((e) => (
-                    <option key={e} value={e}>{e}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-            <div className="form-row">
-              <div className="form-group">
-                <label>Education : </label>
-                <select name="education" onChange={handleChange} required>
-                  <option value="">Select Education</option>
-                  {educations.map((edu) => (
-                    <option key={edu} value={edu}>{edu}</option>
-                  ))}
-                </select>
-              </div>
-              <div className="form-group">
-                <label>Date of Birth : </label>
-                <input type="date" name="dob" onChange={handleChange} required />
-              </div>
-            </div>
-
-            <div className="form-group full-width">
-              <label>Sex : </label>
-              <div className="radio-group">
-                <label><input type="radio" name="sex" value="Male" onChange={handleChange} required /> Male</label>
-                <label><input type="radio" name="sex" value="Female" onChange={handleChange} required /> Female</label>
-                <label><input type="radio" name="sex" value="Other" onChange={handleChange} required /> Other</label>
-              </div>
-            </div>
-
-            <div className="form-group full-width">
-              <label>Upload CV : </label>
-              <input type="file" name="cv" accept=".pdf,.doc,.docx" onChange={handleChange} required />
-            </div>
-
-            <button type="submit" className="submit-btn">Submit</button>
-          </form>
-        </div>
-
-
-
-
-
-        <div className="relative w-full p-6 flex bg-white flex-col items-center" style={{
-          backgroundImage: `url(${chooseimgbg})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundPositionY: '140%',
-        }}>
-
-
-          <div className="p-6 max-w-2xl mx-auto text-gray-700 rounded-lg">
-            <h2 className="text-3xl font-bold text-danger">Quick Contact</h2>
-            <p className="mt-2 text-md text-gray-600">
-              We are pleased to speak with you to discuss your qualifications and options under various immigration programs. Feel free to contact us with any questions.
-            </p>
-
-
-
-            <div className="p-6 w-full rounded-lg mx-auto">
-              <h2 className="text-2xl font-bold text-[#d71c3b] text-center mt-3 mb-5">Immigration Assistance</h2>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {
-                  sidebarDetails.map((item, index) => (
-                    <div key={index} className="py-4 w-fit bg-white shadow-md rounded-lg flex flex-col items-center gap-2 text-center transition-transform transform hover:scale-105">
-                      <div className="mb-3">{item.icon}</div>
-                      <h3 className="font-semibold text-gray-800">{item.title}</h3>
-                      <p className="text-sm text-gray-600">{item.description}</p>
-
-                    </div>
-                  ))
-                }
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div> */}
-
       <EligibilityForm></EligibilityForm>
 
-      <Footer></Footer>
     </div >
   )
 }

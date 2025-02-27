@@ -36,7 +36,7 @@ export default function Denmark() {
       <div className="bg-breadcrumb">
         <div className="breadcrumb-image">
           <div className="overlay-gradient"></div>
-          <img src="Images/Canada-Background.jpg" alt="Canada Background" className="breadcrumb-bg" />
+          <img src={countryImages.denmark1} alt="Canada Background" className="breadcrumb-bg" />
         </div>
         <div className="breadcrumb-text">
           <h3>Welcome to Denmark</h3>
@@ -66,7 +66,7 @@ export default function Denmark() {
               With its progressive society, high living standards, and a commitment to sustainability, Denmark is the ideal destination for individuals and families seeking new opportunities. Discover its welcoming communities, career prospects, and exceptional quality of life.
             </p>
             <div className="country-section-image">
-              <img src="/Images/Denmark-Section.jpg" alt="Denmark Immigration" className='img-fluid' />
+              <img src={countryImages.denmark2} alt="Denmark Immigration" className='img-fluid' />
             </div>
           </div>
 
@@ -133,7 +133,7 @@ export default function Denmark() {
               </div>
               <div className="university-image">
                 <img
-                  src="/Images/student-girl.jpg"
+                  src={countryImages.denmark3}
                   alt="Student in Denmark"
                   className='img-fluid'
                 />
@@ -184,7 +184,7 @@ export default function Denmark() {
           </div>
 
           <div className="approval-card">
-            <img className="background-pattern" src="/Images/patterns.jpg" alt="Background Pattern" />
+            <img className="background-pattern" src={countryImages.denmark3} alt="Background Pattern" />
             <div className="card-content">
 
               <h3>Your Approval, Just One Click Away!</h3>

@@ -6,6 +6,7 @@ import bgImage from "../assets/imgs/AboutArea/bginner.jpg";
 import bgplane from '../BlogDetails/chooseimgbg.png'
 import WOW from 'wowjs';
 import 'animate.css';
+import { Link } from 'react-router-dom';
 
 export default function AboutUs() {
 
@@ -66,7 +67,7 @@ export default function AboutUs() {
                                         <p className="mb-0"><i className="fa fa-arrow-right text-[#B21E24] me-2"></i>24/7 Customer Support</p>
                                     </div>
                                 </div>
-                                <a className="btn Readmore rounded-pill py-3 px-5 mt-2 wow animate__animated animate__zoomIn About-Read-More liquid" href="#">Read More</a>
+                                <Link className="btn Readmore rounded-pill py-3 px-5 mt-2 wow animate__animated animate__zoomIn About-Read-More liquid" to='/AboutPage'>Read More</Link>
                             </div>
                         </div>
                     </div>
