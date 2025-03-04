@@ -71,15 +71,15 @@ export default function BookNowPage() {
             <h3 className="text-xl text-white font-bold mb-4">India</h3>
             <div className="flex items-center gap-3 mb-2">
               <MapPin className="h-5 w-5 text-white" />
-              <p className="text-white text-base">11, Govardhan Galaxy Banglows, opp Yash platina, near Hari Darshan Chowk, Nava Naroda, Ahmedabad - 382330</p>
+              <p className="text-white text-base">B-502, Ananta Square, Near S.P. Ring Road, Ahmedabad-382330</p>
             </div>
             <div className="flex items-center gap-3 mb-2">
               <Mail className="h-5 w-5 text-white" />
-              <p className="text-white text-base">contact@amrutacademy.com</p>
+              <p className="text-white text-base">info@flourishalliiance.com</p>
             </div>
             <div className="flex items-center gap-3 mb-2">
               <Phone className="h-5 w-5 text-white" />
-              <p className="text-white text-base">+91 7043435337</p>
+              <p className="text-white text-base">+91 75739-66606</p>
             </div>
 
             <div className="mt-4 border-t border-gray-300 pt-4">

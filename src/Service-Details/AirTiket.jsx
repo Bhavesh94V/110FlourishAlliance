@@ -68,7 +68,7 @@ export default function AirTiket() {
 
     return (
         <div className="ServicesDetailsMain md:mt-5 pt-4" style={{ backgroundImage: `url(${bgImage})`, scrollBehavior: 'smooth' }}>
-            <div className="container-fluid pt-5">
+            <div className="container-fluid p-0 pt-5">
 
 
                 <div className='CareersPage'>
@@ -81,22 +81,23 @@ export default function AirTiket() {
 
                         </div>
                         <div className="breadcrumb-text">
-                            <h3>Air Ticket Visa</h3>
+                            <h3>Air Ticket Service</h3>
                             <p>
                                 Simplify your travel with our expert Air Ticket Visa services. <br />
                                 We handle the details, so you can focus on your journey.
                             </p>
-                            <Link to="/ContactPage" className="contact-button bg-[#B21E24] p-2 rounded">
-                                Contact Us Today
+                            <Link to="/ContactPage" className="contact-button bg-[#B21E24] p-2 px-3 rounded-full">
+                                Get in Touch with Us Today
                             </Link>
                         </div>
-                        <div className="z-50">
+
+                        <div className="z-50 animate__animated animate__fadeInDown">
                             <div className="text-center pt-3" style={{ maxWidth: '900px' }}>
-                                <ul className="d-flex justify-content-center gap-2 font-bold text-white mb-0 wow fadeInDown" data-wow-delay="0.3s" >
-                                    <li className="item">
-                                        <Link to="/">Home</Link> <span className=''>/</span>
+                                <ul className="d-flex justify-content-center gap-2 font-semibold text-white mb-0 wow fadeInDown" data-wow-delay="0.3s" >
+                                    <li className="item hover:scale-110 transition-all">
+                                        <Link to="/ServicePage">Service</Link> <span className=''>/</span>
                                     </li>
-                                    <li className="text-danger">Opportunity</li>
+                                    <li className="text-white font-bold">Air Ticket</li>
                                 </ul>
                             </div>
                         </div>
@@ -234,7 +235,7 @@ export default function AirTiket() {
                                                 <p className="text-black mt-2">Assistance with airport transfer, accommodation booking, and last-minute travel advice.</p>
                                             </div>
                                             <div className="col-lg-12 my-4">
-                                                <a className="btn btn-small btn-info" href="#">Apply Now</a>
+                                                <Link to='/BookNowPage' className="btn btn-small btn-info" href="#">Apply Now</Link>
                                             </div>
                                         </div>
                                     </div>
@@ -487,8 +488,8 @@ export default function AirTiket() {
                             </div>
                             <div className="right-side">
                                 <div className="topic-text">Send us a message</div>
-                                <p>If you have any work from me or any types of queries related to my tutorial, you can send me a message from here. It's my pleasure to help you.</p>
-                                
+                                <p className='max-w-[70%]'>If you have any work from me or any types of queries related to my tutorial, you can send me a message from here. It's my pleasure to help you.</p>
+
                                 <EmailForm></EmailForm>
                             </div>
                         </div>

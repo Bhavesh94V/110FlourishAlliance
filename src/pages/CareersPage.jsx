@@ -17,7 +17,7 @@ import India from '../assets/imgs/Pages/Country-Images/Country-Images/india.jpg'
 import Ireland from '../assets/imgs/Pages/Country-Images/Country-Images/Ireland.png';
 import Italy from '../assets/imgs/Pages/Country-Images/Country-Images/Italy.png';
 import opportunity from '../CountryDetails/CountryDetailsImgs/oppourtinity.jpg';
-import Luxembourg from '../assets/imgs/Pages/Country-Images/Country-Images/Luxembourg.png';
+import Luxembourg from '../assets/imgs/Pages/Country-Images/Country-Images/Luxembourg.png'; 
 import Peru from '../assets/imgs/Pages/Country-Images/Country-Images/Peru.png';
 import Colombia from '../assets/imgs/Pages/Country-Images/Country-Images/Colombia.png';
 import UK from '../assets/imgs/Pages/Country-Images/Country-Images/UK.jpg';
@@ -63,7 +63,6 @@ export default function CareersPage() {
     Brazil: Brazil,
     NewZealand: NewZealand,
     Italy: Italy,
-    opportunity: opportunity
   };
 
   const locations = [
@@ -90,7 +89,7 @@ export default function CareersPage() {
 
             <div className="overlay-gradient"></div>
 
-            <img src={countryImages.opportunity} alt="Breadcrumb Background" className="breadcrumb-bg" />
+            <img src={PagesImage.oppourtinity} alt="Breadcrumb Background" className="breadcrumb-bg" />
 
           </div>
           <div className="breadcrumb-text">

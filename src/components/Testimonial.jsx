@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import bgImage from "../assets/imgs/AboutArea/bginner.jpg";
 import img1 from "../assets/imgs/Testimonial/img1.jpg";
 import img2 from "../assets/imgs/Testimonial/img2.jpg";
 import img3 from "../assets/imgs/Testimonial/img3.jpg";
@@ -12,7 +11,6 @@ import img6 from "../assets/imgs/Testimonial/img6.jpg";
 import '../assets/styles/Testimonial.css'
 import WOW from 'wowjs';
 import 'animate.css';
-import Footer from './Footer';
 
 export default function Testimonial() {
   useEffect(() => {
@@ -91,8 +89,8 @@ export default function Testimonial() {
   ];
 
   return (
-    <div style={{ background: `url(${bgImage})` }}>
-      <div className="container-fluid testimonial overflow-hidden pb-3">
+    <div>
+      <div className="container-fluid testimonial overflow-hidden bg-white pb-3">
         <div className="container py-5">
           <div className="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
             <div className="sub-style">

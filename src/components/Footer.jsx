@@ -51,7 +51,7 @@ const Footer = () => {
                     <div className="col-md-6 col-lg-4">
                         <div className="footer-about">
                             <h3 className="animate__animated animate__zoomIn">About Us</h3>
-                            <p>
+                            <p className="">
                                 At Flourish Alliance Immigration, we are dedicated to guiding you through your immigration journey. With years of experience, we provide expert consultation and personalized solutions for study, work, and permanent residency visas.
                             </p>
                         </div>
@@ -84,9 +84,9 @@ const Footer = () => {
                             <div className="col-md-6 col-lg-4">
                                 <div className="footer-contact">
                                     <h3 className="animate__animated animate__zoomIn">Contact Us</h3>
-                                    <p><i className="fa fa-map-marker-alt"></i> 456 Avenue, Suite 789, Toronto, Canada</p>
-                                    <p><i className="fa fa-phone-alt"></i> +1 234 567 8901</p>
-                                    <p><i className="fa fa-envelope"></i> support@flourishalliance.com</p>
+                                    <p><i className="fa fa-map-marker-alt"></i>B-502, Ananta Square, Near S.P. Ring Road, Ahmedabad-382330</p>
+                                    <p><i className="my-3 fa fa-phone-alt"></i> +91 75739-66606</p>
+                                    <p><i className="fa fa-envelope"></i>info@flourishalliiance.com</p>
                                     <div className="footer-social">
                                         <a href="#"><i className="fab fa-twitter animate__animated animate__zoomIn"></i></a>
                                         <a href="#"><i className="fab fa-facebook-f animate__animated animate__zoomIn"></i></a>
@@ -101,16 +101,6 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="container footer-menu">
-                <div className="f-menu">
-                    <Link className="text-[13px] flex animate__animated animate__zoomIn">Terms of Service <span className="ms-2">|</span></Link>
-                    <Link className="text-[13px] flex animate__animated animate__zoomIn">Privacy Policy <span className="ms-2">|</span></Link>
-                    <Link className="text-[13px] flex animate__animated animate__zoomIn">Disclaimer <span className="ms-2">|</span></Link>
-                    <Link className="text-[13px] flex animate__animated animate__zoomIn">Help <span className="ms-2">|</span></Link>
-                    <Link className="text-[13px] flex animate__animated animate__zoomIn">FAQs</Link>
-                </div>
-            </div>
-
             <div className="container copyright">
                 <div className="row">
                     <div className="col-md-6 animate__animated animate__zoomIn">
@@ -118,8 +108,8 @@ const Footer = () => {
                     </div>
                     <div className="col-md-6 animate__animated animate__zoomIn">
                         <p>
-                            <Link to="/privacy-policy">Privacy Policy | </Link>
-                            <Link to="/terms">Terms & Conditions</Link>
+                            <Link className="" to="/privacy-policy">Privacy Policy | </Link>
+                            <Link className="" to="/terms">Terms & Conditions</Link>
                         </p>
                     </div>
                 </div>

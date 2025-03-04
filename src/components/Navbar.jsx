@@ -7,8 +7,8 @@ import 'animate.css';
 
 const navbarConfig = {
     contactInfo: [
-        { icon: "fas fa-envelope", text: "flourishalliance991@gmail.com", href: "mailto:info@flourishimmigration.com" },
-        { icon: "fas fa-phone-alt", text: "+123 456 7890", href: "tel:+1234567890" },
+        { icon: "fas fa-envelope", text: "info@flourishalliiance.com", href: "mailto:info@flourishalliiance.com" },
+        { icon: "fas fa-phone-alt", text: "+91 75739-66606 ", href: "tel:+75739-66606   " },
     ],
     socialMedia: ["twitter", "facebook-f", "linkedin-in", "instagram", "youtube"],
     navLinks: [

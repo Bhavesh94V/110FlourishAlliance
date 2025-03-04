@@ -25,6 +25,16 @@ const countryImages = {
     SouthAfrica: require('../assets/imgs/Pages/Country-Images/Country-Images/SouthAfrica.jpg'),
     chooseimgbg: require('../ServicesDetails/Service-MiniSlider-Imgs/chooseimgbg.png'),
 
+    // AustraliaCity: require('../ServicesDetails/Service-MiniSlider-Imgs/AustraliaCity.png'),
+    // SouthAfricaCity: require('../ServicesDetails/Service-MiniSlider-Imgs/SouthAfricaCity.png'),
+    // JapanCity: require('../ServicesDetails/Service-MiniSlider-Imgs/JapanCity.png'),
+    // USACity: require('../ServicesDetails/Service-MiniSlider-Imgs/USACity.png'),
+    // UKCity: require('../ServicesDetails/Service-MiniSlider-Imgs/UKCity.png'),
+    // ItalyCity: require('../ServicesDetails/Service-MiniSlider-Imgs/ItalyCity.png'),
+    // GermanyCity: require('../ServicesDetails/Service-MiniSlider-Imgs/GermanyCity.png'),
+    // FranceCity: require('../ServicesDetails/Service-MiniSlider-Imgs/FranceCity.png'),
+    // BelgiumCity: require('../ServicesDetails/Service-MiniSlider-Imgs/BelgiumCity.png'),
+
 
     canada1: require('../CountryDetails/CountryDetailsImgs/canada1.jpg'),
     canada2: require('../CountryDetails/CountryDetailsImgs/canada2.jpg'),

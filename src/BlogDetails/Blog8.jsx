@@ -1,60 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { db } from '../firebase';
-import { collection, addDoc, onSnapshot, query, orderBy, doc, deleteDoc } from 'firebase/firestore';
+import { collection, addDoc } from 'firebase/firestore';
 import blogimg8 from "../assets/imgs/Blog/blogimg8.jpg";
 import bgImage from "../assets/imgs/AboutArea/bginner.jpg";
 import Footer from '../components/Footer';
 import chooseimgbg from '../BlogDetails/chooseimgbg.png';
-import paperplane from '../BlogDetails/paperplane.png';
 import LogosSection from "../components/LogosSection ";
-import service1 from '../ServicesDetails/Service-MiniSlider-Imgs/service2.jpg';
+import Comment from './Comment';
+import { Link } from 'react-router-dom';
 
 export default function Blog8() {
-    const [comments, setComments] = useState([]);
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [text, setText] = useState('');
 
-    useEffect(() => {
-        const q = query(collection(db, 'comments'), orderBy("date", "desc"));
-        const unsubscribe = onSnapshot(q, (snapshot) => {
-            const updatedComments = snapshot.docs.map(doc => ({
-                id: doc.id,
-                ...doc.data()
-            }));
-            setComments(updatedComments);
-            localStorage.setItem("comments", JSON.stringify(updatedComments));
-        });
-        return () => unsubscribe();
-    }, []);
+    const [newsletterEmail, setNewsletterEmail] = useState('');
 
-    useEffect(() => {
-        const savedComments = localStorage.getItem("comments");
-        if (savedComments) {
-            setComments(JSON.parse(savedComments));
-        }
-    }, []);
-
-    const handleSubmit = async (e) => {
+    const handleSubmit2 = async (e) => {
         e.preventDefault();
-        if (!name || !email || !text) return alert('All fields are required');
-        await addDoc(collection(db, 'comments'), {
-            name,
-            email,
-            text,
-            date: new Date().toISOString()
-        });
-        setName('');
-        setEmail('');
-        setText('');
-    };
-
-    const handleDelete = async (id) => {
-        await deleteDoc(doc(db, "comments", id));
+        if (!newsletterEmail) return alert('Please enter your email');
+        await addDoc(collection(db, 'newsletterSubscriptions'), { email: newsletterEmail });
+        alert('Subscribed successfully!');
+        setNewsletterEmail('');
     };
 
     return (
-        <div className="pt-5 bg-cover bg-center min-h-screen Blog-Details" style={{ backgroundImage: `url(${ bgImage })` }}>
+        <div className="pt-5 bg-cover bg-center min-h-screen Blog-Details" style={{ backgroundImage: `url(${bgImage})` }}>
 
             <div class="bg-[#B21E24] lg:mt-[109px] md:mt-[50px] py-5 bg-custom mt-custom">
                 <div class="container mx-auto text-white px-5">
@@ -77,15 +45,15 @@ export default function Blog8() {
                     <nav class="text-sm text-gray-600">
                         <ol class="flex space-x-2">
                             <li>
-                                <a href="#" class="text-danger hover:underline">VisaHub</a>
+                                <Link to='/' class="text-danger hover:underline">Home</Link>
                             </li>
                             <span>/</span>
                             <li>
-                                <a href="#" class="text-danger hover:underline">Blog</a>
+                                <Link to='/BlogPage' class="text-danger hover:underline">Blog</Link>
                             </li>
                             <span>/</span>
                             <li>
-                                <span class="text-gray-500">Achieving Educational Dreams Abroad</span>
+                                <span class="text-gray-500">Educational Dreams Abroad</span>
                             </li>
                         </ol>
                     </nav>
@@ -130,7 +98,7 @@ export default function Blog8() {
                                     An <strong>immigration visa</strong> offers long-term residency, while a <strong>work permit</strong> provides temporary work authorization.
                                 </p>
 
-                                <div style={{ backgroundImage: `url(${ chooseimgbg })`, backgroundPosition: '350px 20px', backgroundRepeat: 'no-repeat' }}>
+                                <div style={{ backgroundImage: `url(${chooseimgbg})`, backgroundPosition: '350px 20px', backgroundRepeat: 'no-repeat' }}>
                                     <h3 className="text-2xl font-semibold mb-2 text-danger">4. Essential Documents</h3>
                                     <ul className="list-disc pl-5 mb-4">
                                         <li>Passport, Visa application</li>
@@ -161,96 +129,104 @@ export default function Blog8() {
                             </div>
                         </div>
                     </article>
-                    <section className="comments-section p-6 bg-white rounded-lg shadow-md mt-6">
-                        <h3 className="text-2xl mb-4 text-danger font-bold">Comments ({comments.length})</h3>
-                        {
-                            comments.map((comment) => (
-                                <div key={comment.id} className="p-4 bg-gray-100 rounded-lg shadow-sm mt-4">
-                                    <h2 className="font-bold text-lg">{comment.name} <span className="text-sm text-gray-600">({new Date(comment.date).toLocaleDateString()})</span></h2>
-                                    <p className="text-gray-800 mt-1">{comment.text}</p>
-                                    {/* <button onClick={() => handleDelete(comment.id)} className="text-red-500 mt-2 hover:underline">Delete</button> */}
-                                </div>
-                            ))
-                        }
-                    </section>
-                    <section className="comment-form mt-6 bg-white flex flex-col md:flex-row p-6 rounded-lg shadow-md">
-                        <div>
-                            <h4 className="text-2xl font-semibold mb-4 text-danger">Post a Comment</h4>
-                            <form onSubmit={handleSubmit} className="space-y-4 max-w-[500px]">
-                                <input type="text" className="border p-3 w-full rounded-lg" placeholder="Your Name*" value={name} onChange={(e) => setName(e.target.value)} required />
-                                <input type="email" className="border p-3 w-full rounded-lg" placeholder="Your Email*" value={email} onChange={(e) => setEmail(e.target.value)} required />
-                                <textarea className="border p-3 w-full rounded-lg" placeholder="Your Comment*" rows="4" value={text} onChange={(e) => setText(e.target.value)} required></textarea>
-                                <button type="submit" className="bg-danger text-white px-6 py-3 rounded-lg w-full">Post Comment</button>
-                            </form>
-                        </div>
-                        <div className='max-w-[500px] mx-auto my-auto pt-4'>
-                            <img src="https://img.freepik.com/free-vector/reviews-concept-landing-page_52683-18566.jpg?t=st=1739184528~exp=1739188128~hmac=c86d5d55b0ad59b16b42d6e5bfcb473e14716daf9b2fc40c41e53bbe984c4303&w=1380" alt="" className='img-fluid w-full' />
-                        </div>
-                    </section>
+                    <Comment></Comment>
                 </main>
                 <aside className="w-full lg:w-1/4 h-fit bg-white p-5 rounded-lg shadow-md">
-
-
                     <div class="">
                         {/* Related Blogs Section */}
                         <div class="mb-8">
                             <h3 class="text-xl font-semibold mb-4 text-gray-800 flex items-center">
-                                <i class="fas fa-blog text-danger mr-2"></i> Related Blogs
+                                <i class="fas fa-blog text-danger mr-2"></i> Other Blogs
                             </h3>
+
                             <ul class="space-y-4">
+
                                 <li>
-                                    <a
-                                        href="#"
+                                    <Link
+                                        to='/Blog/9'
                                         class="text-gray-600 flex items-center group transition duration-300"
                                     >
                                         <i class="fas fa-chevron-right text-sm mr-2 text-danger group-hover:translate-x-2 transition duration-300"></i>
-                                        <span class="group-hover:text-danger">Work Visa Guide</span>
-                                    </a>
+                                        <span class="group-hover:text-danger">Expert Guidance & Study Visas</span>
+                                    </Link>
                                 </li>
+
                                 <li>
-                                    <a
-                                        href="#"
+                                    <Link
+                                        to='/Blog/1'
                                         class="text-gray-600 flex items-center group transition duration-300"
                                     >
                                         <i class="fas fa-chevron-right text-sm mr-2 text-danger group-hover:translate-x-2 transition duration-300"></i>
-                                        <span class="group-hover:text-danger">Study Abroad Tips</span>
-                                    </a>
+                                        <span class="group-hover:text-danger">Global Education</span>
+                                    </Link>
                                 </li>
+
                                 <li>
-                                    <a
-                                        href="#"
+                                    <Link
+                                        to='/Blog/2'
                                         class="text-gray-600 flex items-center group transition duration-300"
                                     >
                                         <i class="fas fa-chevron-right text-sm mr-2 text-danger group-hover:translate-x-2 transition duration-300"></i>
-                                        <span class="group-hover:text-danger">Business Visa Essentials</span>
-                                    </a>
+                                        <span class="group-hover:text-danger"> Study Visas</span>
+                                    </Link>
                                 </li>
+
+                                <li>
+                                    <Link
+                                        to='/Blog/3'
+                                        class="text-gray-600 flex items-center group transition duration-300"
+                                    >
+                                        <i class="fas fa-chevron-right text-sm mr-2 text-danger group-hover:translate-x-2 transition duration-300"></i>
+                                        <span class="group-hover:text-danger">International Education</span>
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link
+                                        to='/Blog/4'
+                                        class="text-gray-600 flex items-center group transition duration-300"
+                                    >
+                                        <i class="fas fa-chevron-right text-sm mr-2 text-danger group-hover:translate-x-2 transition duration-300"></i>
+                                        <span class="group-hover:text-danger">Guiding Students to Global Success</span>
+                                    </Link>
+                                </li>
+
                             </ul>
+
+
                         </div>
 
-                        {/* Contact a Consultant */}
+                        <hr /><br />
+
                         <div class="mb-8">
+
                             <h3 class="text-xl font-semibold mb-4 text-gray-800 flex items-center">
                                 <i class="fas fa-headset text-danger mr-2"></i> Contact a Consultant
                             </h3>
+
                             <p class="text-gray-600 mb-4">
                                 Need expert advice on immigration? Get in touch with our experienced consultants.
                             </p>
-                            <button class="bg-danger text-white px-4 py-2 rounded-lg hover:bg-danger-dark hover:scale-105 transition duration-300">
-                                <i class="fas fa-envelope mr-2"></i> Contact Us
-                            </button>
+                            <Link to='/ContactPage'>
+                                <button class="bg-danger text-white px-4 py-2 rounded-lg hover:bg-danger-dark hover:scale-105 transition duration-300">
+                                    <i class="fas fa-envelope mr-2"></i> Contact Us
+                                </button>
+                            </Link>
                         </div>
 
-                        {/* Newsletter Subscription */}
+                        <hr /><br />
+
                         <div class="mb-8">
                             <h3 class="text-xl font-semibold mb-4 text-gray-800 flex items-center">
                                 <i class="fas fa-envelope-open-text text-danger mr-2"></i> Subscribe to Newsletter
                             </h3>
-                            <form class="space-y-4">
+                            <form class="space-y-4" onSubmit={handleSubmit2}>
                                 <input
                                     type="email"
                                     class="w-full border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-danger transition duration-300"
                                     placeholder="Your Email Address"
+                                    value={newsletterEmail}
+                                    onChange={(e) => setNewsletterEmail(e.target.value)}
                                 />
                                 <button
                                     type="submit"
@@ -261,50 +237,48 @@ export default function Blog8() {
                             </form>
                         </div>
 
+                        <hr /><br />
+
                         {/* Social Media Links */}
                         <div>
                             <h3 class="text-xl font-semibold mb-4 text-gray-800 flex items-center">
                                 <i class="fas fa-share-alt text-danger mr-2"></i> Follow Us
                             </h3>
                             <div class="flex space-x-4">
-                                <a
-                                    href="#"
+                                <Link
+                                    to='/Blog/2'
                                     class="text-gray-600 hover:text-danger text-2xl transition duration-300"
-                                    aria-label="Facebook"
                                 >
                                     <i class="fab fa-facebook"></i>
-                                </a>
-                                <a
-                                    href="#"
+                                </Link>
+                                <Link
+                                    to='/Blog/2'
                                     class="text-gray-600 hover:text-danger text-2xl transition duration-300"
-                                    aria-label="Twitter"
                                 >
                                     <i class="fab fa-twitter"></i>
-                                </a>
-                                <a
-                                    href="#"
+                                </Link>
+                                <Link
+                                    to='/Blog/2'
                                     class="text-gray-600 hover:text-danger text-2xl transition duration-300"
-                                    aria-label="LinkedIn"
                                 >
                                     <i class="fab fa-linkedin"></i>
-                                </a>
-                                <a
-                                    href="#"
+                                </Link>
+                                <Link
+                                    to='/Blog/2'
                                     class="text-gray-600 hover:text-danger text-2xl transition duration-300"
-                                    aria-label="Instagram"
                                 >
                                     <i class="fab fa-instagram"></i>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
 
-
-
-
                     <h2 className="text-2xl font-semibold mt-6 mb-4">Contact a Consultant</h2>
                     <p>Need help with your immigration process? Contact our expert consultants.</p>
-                    <button className="bg-danger text-white px-4 py-2 mt-4 rounded-lg w-full">Get Consultation</button>
+
+                    <Link to='/BookNowPage'>
+                        <button className="bg-danger text-white px-4 py-2 mt-4 rounded-lg w-full">Get Consultation</button>
+                    </Link>
                 </aside>
             </div>
             <LogosSection />

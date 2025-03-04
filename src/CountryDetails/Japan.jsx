@@ -43,9 +43,20 @@ export default function Japan() {
           <p>
             Experience Japan’s rich culture, advanced technology, and top-tier education. A global leader in innovation and a land of endless opportunities for students and professionals.
           </p>
-          <a href="#contact-container" className="contact-button">
-            Get in Touch with Us Today!
-          </a>
+          <Link to="/ContactPage" className="contact-button bg-[#B21E24] p-2 px-3 rounded-full">
+            Get in Touch with Us Today
+          </Link>
+
+          <div className="z-50 animate__animated animate__fadeInDown">
+            <div className="text-center pt-3" style={{ maxWidth: '900px' }}>
+              <ul className="d-flex justify-content-center gap-2 font-semibold text-white mb-0 wow fadeInDown" data-wow-delay="0.3s" >
+                <li className="item hover:scale-125 transition-all">
+                  <Link to="/CareersPage">Opportunity</Link> <span className=''>/</span>
+                </li>
+                <li className="text-white">Japan</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -188,7 +199,7 @@ export default function Japan() {
             <div className="card-content">
 
               <h3>Your Approval, Just One Click Away!</h3>
-              <button className="get-in-touch-btn">Get in Touch</button>
+             <Link to='/ContactPage' className="get-in-touch-btn">Get in Touch</Link>
             </div>
           </div>
         </div>

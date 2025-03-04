@@ -2,10 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../Service-Details/test.css';
 import Footer from '../components/Footer';
-import bgImage from "../assets/imgs/AboutArea/bginner.jpg";
 import Service from '../components/Service';
 import service1 from './Service-MiniSlider-Imgs/service1.jpg';
-// import mapImage from '../ServicesDetails/Service-MiniSlider-Imgs/mapImg.png'
 import StudyVisa from '../ServicesDetails/Service-MiniSlider-Imgs/Study-Visa.jpg'
 import chooseimgbg from '../ServicesDetails/Service-MiniSlider-Imgs/chooseimgbg.png'
 
@@ -81,7 +79,7 @@ export default function Studyvisa() {
 
     // Send email using emailjs
     const sendEmail = (e) => {
-        e.preventDefault(); 
+        e.preventDefault();
 
         emailjs.send(
             'service_3yis346',
@@ -95,8 +93,8 @@ export default function Studyvisa() {
 
 
     return (
-        <div className="ServicesDetailsMain  md:mt-5 pt-5" style={{ backgroundImage: `url(${bgImage})` }}>
-            <div className="container-fluid pt-5">
+        <div className="ServicesDetailsMain  md:mt-5 pt-5">
+            <div className="container-fluid p-0 pt-5">
 
                 <div className="CareersPage">
                     <div className="bg-breadcrumb flex flex-col">
@@ -112,20 +110,23 @@ export default function Studyvisa() {
                             <p>
                                 We provide expert guidance for students to achieve their dream of studying abroad with hassle-free visa services.
                             </p>
-                            <Link to="/ContactPage" className="contact-button bg-[#B21E24] p-2 rounded">
+
+                            <Link to="/ContactPage" className="contact-button bg-[#B21E24] p-2 px-3 rounded-full">
                                 Get in Touch with Us Today
                             </Link>
                         </div>
-                        <div className="z-50">
+
+                        <div className="z-50 animate__animated animate__fadeInDown">
                             <div className="text-center pt-3" style={{ maxWidth: '900px' }}>
-                                <ul className="d-flex justify-content-center gap-2 font-bold text-white mb-0 wow fadeInDown" data-wow-delay="0.3s" >
-                                    <li className="item">
-                                        <Link to="/">Home</Link> <span className=''>/</span>
+                                <ul className="d-flex justify-content-center gap-2 font-semibold text-white mb-0 wow fadeInDown" data-wow-delay="0.3s" >
+                                    <li className="item hover:scale-110 transition-all">
+                                        <Link to="/ServicePage">Service</Link> <span className=''>/</span>
                                     </li>
-                                    <li className="text-danger">Study Visa</li>
+                                    <li className="text-white font-bold">Study Visa</li>
                                 </ul>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
@@ -262,8 +263,7 @@ export default function Studyvisa() {
                                                 <p className='text-black mt-2'> Get valuable tips on travel, accommodation, and adapting to a new country.</p>
                                             </div>
                                             <div className="col-lg-12 my-4">
-                                                <Link to='/ContactPage' className="btn btn-small btn-info">Contact Us Now</Link>
-
+                                                <Link to='/BookNowPage' className="btn btn-small btn-info" href="#">Apply Now</Link>
                                             </div>
                                         </div>
                                     </div>
@@ -513,7 +513,7 @@ export default function Studyvisa() {
                             </div>
                             <div className="right-side">
                                 <div className="topic-text">Send us a message</div>
-                                <p>If you have any work from me or any types of queries related to my tutorial, you can send me a message from here. It's my pleasure to help you.</p>
+                                <p className='max-w-[70%]'>If you have any work from me or any types of queries related to my tutorial, you can send me a message from here. It's my pleasure to help you.</p>
 
                                 <EmailForm></EmailForm>
                             </div>

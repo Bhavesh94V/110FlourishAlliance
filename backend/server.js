@@ -77,7 +77,7 @@ app.post("/send-email", async (req, res) => {
         console.error("Email send error:", error);
         res.status(500).json({ success: false, message: "Failed to send email" });
     }
-    
+
 });
 
 // ✅ Email Function for Eligibility Form
@@ -86,23 +86,85 @@ const sendEligibilityEmail = (formData, cvPath) => {
         from: process.env.EMAIL_USER,
         to: process.env.RECIPIENT_EMAIL,
         subject: 'New Eligibility Form Submission',
-        text: `
-        First Name: ${formData.firstName}
-        Middle Name: ${formData.middleName}
-        Last Name: ${formData.lastName}
-        Contact: ${formData.contact}
-        Email: ${formData.email}
-        Country: ${formData.country}
-        Enquiry: ${formData.enquiry}
-        Education: ${formData.education}
-        Date of Birth: ${formData.dob}
-        Gender: ${formData.sex}
-        `,
+        html: `
+    <html>
+        <head>
+            <style>
+                body {
+                    font-family: 'Arial', sans-serif;
+                    color: #333;
+                    background-color: #f9f9f9;
+                    margin: 0;
+                    padding: 0;
+                }
+                .container {
+                    width: 80%;
+                    max-width: 600px;
+                    margin: 30px auto;
+                    padding: 20px;
+                    background-color: #fff;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                }
+                h1 {
+                    color: #fff;
+                    background-color: #d32f2f; /* Red background for the title */
+                    padding: 15px;
+                    text-align: center;
+                    border-radius: 8px;
+                    margin-bottom: 20px;
+                }
+                h2 {
+                    color: #333;
+                    font-size: 20px;
+                }
+                p {
+                    font-size: 16px;
+                    line-height: 1.6;
+                }
+                .highlight {
+                    font-weight: bold;
+                    color: #333;
+                }
+                .footer {
+                    text-align: center;
+                    margin-top: 20px;
+                    color: #888;
+                    font-size: 14px;
+                }
+                .hr {
+                    border: 0;
+                    border-top: 1px solid #ddd;
+                    margin: 20px 0;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>Eligibility Form Submission</h1>
+                <h2>New Submission Details</h2>
+                <p><span class="highlight">First Name:</span> ${formData.firstName}</p>
+                <p><span class="highlight">Middle Name:</span> ${formData.middleName}</p>
+                <p><span class="highlight">Last Name:</span> ${formData.lastName}</p>
+                <p><span class="highlight">Contact:</span> ${formData.contact}</p>
+                <p><span class="highlight">Email:</span> ${formData.email}</p>
+                <p><span class="highlight">Country:</span> ${formData.country}</p>
+                <p><span class="highlight">Enquiry:</span> ${formData.enquiry}</p>
+                <p><span class="highlight">Education:</span> ${formData.education}</p>
+                <p><span class="highlight">Date of Birth:</span> ${formData.dob}</p>
+                <p><span class="highlight">Gender:</span> ${formData.sex}</p>
+                <div class="hr"></div>
+                <p class="footer">Best regards, <br/> Eligibility Form System</p>
+            </div>
+        </body>
+    </html>
+    `,
         attachments: cvPath ? [{
             filename: `CV-${formData.firstName}.pdf`,
             path: cvPath
         }] : []
     };
+
 
     transporter.sendMail(mailOptions, (err, info) => {
         if (err) {
@@ -144,19 +206,81 @@ const sendAppointmentEmail = (appointment) => {
     const mailOptions = {
         from: process.env.EMAIL_USER,
         to: process.env.RECIPIENT_EMAIL, // ✅ Aapka Email
-        subject: 'New Appointment Booking',
-        text: `
-        First Name: ${appointment.firstName}
-        Last Name: ${appointment.lastName}
-        Email: ${appointment.email}
-        Phone: ${appointment.phone}
-        Reason: ${appointment.reason}
-        Details: ${appointment.details}
-        Address: ${appointment.address}
-        Date: ${appointment.date}
-        Time: ${appointment.time}
-        `,
+        subject: 'New Appointment Booking with Flourish Alliance',
+        html: `
+    <html>
+        <head>
+            <style>
+                body {
+                    font-family: 'Arial', sans-serif;
+                    color: #333;
+                    background-color: #f4f4f4;
+                    margin: 0;
+                    padding: 0;
+                }
+                .container {
+                    width: 80%;
+                    max-width: 600px;
+                    margin: 30px auto;
+                    padding: 20px;
+                    background-color: #fff;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                }
+                h1 {
+                    color: red;
+                    text-align: center;
+                }
+                h2 {
+                    color: #333;
+                    margin-top: 10px;
+                    font-size: 20px;
+                }
+                p {
+                    font-size: 16px;
+                    line-height: 1.6;
+                }
+                .highlight {
+                    font-weight: bold;
+                    color: #333;
+                }
+                .footer {
+                    text-align: center;
+                    margin-top: 20px;
+                    color: red;
+                    font-size: 14px;
+                }
+                .hr {
+                    border: 0;
+                    border-top: 1px solid #ddd;
+                    margin: 20px 0;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>Flourish Alliance</h1>
+                <h2>New Appointment Booking</h2>
+                <p>Dear Team,</p>
+                <p>We have received a new appointment request. Below are the details:</p>
+                <p><span class="highlight">First Name:</span> ${appointment.firstName}</p>
+                <p><span class="highlight">Last Name:</span> ${appointment.lastName}</p>
+                <p><span class="highlight">Email:</span> ${appointment.email}</p>
+                <p><span class="highlight">Phone:</span> ${appointment.phone}</p>
+                <p><span class="highlight">Reason for Appointment:</span> ${appointment.reason}</p>
+                <p><span class="highlight">Details:</span> ${appointment.details}</p>
+                <p><span class="highlight">Address:</span> ${appointment.address}</p>
+                <p><span class="highlight">Date:</span> ${appointment.date}</p>
+                <p><span class="highlight">Time:</span> ${appointment.time}</p>
+                <div class="hr"></div>
+                <p class="footer">Best regards, <br/> Flourish Alliance Appointment System</p>
+            </div>
+        </body>
+    </html>
+    `,
     };
+
+
 
     transporter.sendMail(mailOptions, (err, info) => {
         if (err) {

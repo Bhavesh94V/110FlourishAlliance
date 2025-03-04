@@ -71,7 +71,7 @@ export default function ServicePage() {
       <div className="bg-ServiceInnerContent mt-5 flex flex-col mb-5">
         <div className="ServiceInnerContent-image">
           <div className="overlay-gradient"></div>
-          <img src='https://img.freepik.com/free-photo/travelling-concept-with-group-travelers-miniature_1150-17844.jpg?t=st=1739188093~exp=1739191693~hmac=ee67041549b4ca07abc8df5e6ec5d4a6bef2f942a9ab7441b85c03cc7682d29f&w=1380' alt="ServiceInnerContent Background" className="ServiceInnerContent-bg" />
+          <img src={ImmigrationService} alt="ServiceInnerContent Background" className="ServiceInnerContent-bg h-" />
         </div>
         <div className="ServiceInnerContent-text">
           <h3 className="text-white display-3 mb-4" style={{ fontWeight: '600' }}>

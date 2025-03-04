@@ -68,7 +68,7 @@ export default function VisitorVisa() {
 
     return (
         <div className="ServicesDetailsMain md:mt-5 pt-5" style={{ backgroundImage: `url(${bgImage})` }}>
-            <div className="container-fluid pt-5">
+            <div className="container-fluid p-0 pt-5">
 
 
                 <div className='CareersPage'>
@@ -81,22 +81,23 @@ export default function VisitorVisa() {
 
                         </div>
                         <div className="breadcrumb-text">
-                            <h3>Visitor Visa</h3>
+                            <h3>Visitor Visa Service</h3>
                             <p>
                                 Get expert help to secure your visitor visa smoothly. <br />
                                 Your journey starts here—let us assist you.
                             </p>
-                            <Link to="/ContactPage" className="contact-button bg-[#B21E24] p-2 rounded">
+                            <Link to="/ContactPage" className="contact-button bg-[#B21E24] p-2 px-3 rounded-full">
                                 Get in Touch with Us Today
                             </Link>
                         </div>
-                        <div className="z-50">
+
+                        <div className="z-50 animate__animated animate__fadeInDown">
                             <div className="text-center pt-3" style={{ maxWidth: '900px' }}>
-                                <ul className="d-flex justify-content-center gap-2 font-bold text-white mb-0 wow fadeInDown" data-wow-delay="0.3s" >
-                                    <li className="item">
-                                        <Link to="/">Home</Link> <span className=''>/</span>
+                                <ul className="d-flex justify-content-center gap-2 font-semibold text-white mb-0 wow fadeInDown" data-wow-delay="0.3s" >
+                                    <li className="item hover:scale-110 transition-all">
+                                        <Link to="/ServicePage">Service</Link> <span className=''>/</span>
                                     </li>
-                                    <li className="text-danger">Opportunity</li>
+                                    <li className="text-white font-bold">Visitor Visa</li>
                                 </ul>
                             </div>
                         </div>
@@ -233,7 +234,7 @@ export default function VisitorVisa() {
                                                 <p className='text-black mt-2'>We provide tips and advice for your travel preparations, including your journey, accommodation, and cultural adjustments.</p>
                                             </div>
                                             <div className="col-lg-12 my-4">
-                                                <a className="btn btn-small btn-info" href="#">Apply Now</a>
+                                                <Link to='/BookNowPage' className="btn btn-small btn-info" href="#">Apply Now</Link>
                                             </div>
                                         </div>
                                     </div>
@@ -488,8 +489,8 @@ export default function VisitorVisa() {
                             </div>
                             <div className="right-side">
                                 <div className="topic-text">Send us a message</div>
-                                <p>If you have any work from me or any types of queries related to my tutorial, you can send me a message from here. It's my pleasure to help you.</p>
-                                    
+                                <p className='max-w-[70%]'>If you have any work from me or any types of queries related to my tutorial, you can send me a message from here. It's my pleasure to help you.</p>
+
                                 <EmailForm></EmailForm>
                             </div>
                         </div>

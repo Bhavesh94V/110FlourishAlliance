@@ -5,25 +5,18 @@ import Footer from '../components/Footer';
 import bgImage from "../assets/imgs/AboutArea/bginner.jpg";
 import Service from '../components/Service';
 import service1 from './Service-MiniSlider-Imgs/service2.jpg';
-// import mapImage from '../ServicesDetails/Service-MiniSlider-Imgs/mapImg.png'
 import StudyVisa from '../ServicesDetails/Service-MiniSlider-Imgs/Study-Visa.jpg'
-import StudyUSA from '../ServicesDetails/Service-MiniSlider-Imgs/StudyUSA.jpg'
-import StudyCanada from '../ServicesDetails/Service-MiniSlider-Imgs/StudyCanada.jpg'
-import StudyAustralia from '../ServicesDetails/Service-MiniSlider-Imgs/StudyAustralia.jpg'
-import StudyUK from '../ServicesDetails/Service-MiniSlider-Imgs/StudyUk.jpg'
 import chooseimgbg from '../ServicesDetails/Service-MiniSlider-Imgs/chooseimgbg.png'
-
 
 import Image1 from '../Service-Details/Images/SVImage1.jpg'
 import Image2 from '../Service-Details/Images/SVImage2.jpg'
 import Image3 from '../Service-Details/Images/SVImage3.jpg'
 import Image4 from '../Service-Details/Images/SVImage4.jpg'
-import SVAbout from '../Service-Details/Images/SVAbout.jpg'
-import SVAbout2 from '../Service-Details/Images/SVAbout2.jpg'
 
 import WOW from 'wowjs';
 import 'animate.css';
 import EmailForm from './EmailForm';
+import countryImages from '../CountryDetails/countryImages';
 
 const studyVisaSteps = [
     {
@@ -76,7 +69,7 @@ export default function WorkVisa() {
 
     return (
         <div className="ServicesDetailsMain md:mt-5 pt-5" style={{ backgroundImage: `url(${bgImage})` }}>
-            <div className="container-fluid pt-5">
+            <div className="container-fluid p-0 pt-5">
 
 
                 <div className='CareersPage'>
@@ -93,17 +86,18 @@ export default function WorkVisa() {
                             <p>
                                 A work visa is an official document that allows individuals <br /> to legally work in a foreign country for a specific period.
                             </p>
-                            <Link to="/ContactPage" className="contact-button bg-[#B21E24] p-2 rounded">
+                            <Link to="/ContactPage" className="contact-button bg-[#B21E24] p-2 px-3 rounded-full">
                                 Get in Touch with Us Today
                             </Link>
                         </div>
-                        <div className="z-50">
+
+                        <div className="z-50 animate__animated animate__fadeInDown">
                             <div className="text-center pt-3" style={{ maxWidth: '900px' }}>
-                                <ul className="d-flex justify-content-center gap-2 font-bold text-white mb-0 wow fadeInDown" data-wow-delay="0.3s" >
-                                    <li className="item">
-                                        <Link to="/">Home</Link> <span className=''>/</span>
+                                <ul className="d-flex justify-content-center gap-2 font-semibold text-white mb-0 wow fadeInDown" data-wow-delay="0.3s" >
+                                    <li className="item hover:scale-110 transition-all">
+                                        <Link to="/ServicePage">Service</Link> <span className=''>/</span>
                                     </li>
-                                    <li className="text-danger">Work Visa</li>
+                                    <li className="text-white font-bold">Work Visa</li>
                                 </ul>
                             </div>
                         </div>
@@ -140,16 +134,14 @@ export default function WorkVisa() {
                                 <div className=" w-[250px] md:w-[300px] lg:w-[450px] relative">
                                     {/* Main Image */}
                                     <img
-                                        // src={SVAbout}
-                                        src="https://img.freepik.com/free-photo/visa-application-composition-with-europe-america-flag_23-2149117811.jpg?t=st=1739542631~exp=1739546231~hmac=9e1f009d7a079268c591bd75163930e4cdaeca387a6b85b301d5ef397884612c&w=740"
+                                        src={countryImages.australia3}
                                         className="rounded-b-full border-4 border-danger w-full max-h-[500px]"
 
                                         alt="Main Image"
                                     />
                                     {/* Overlay Image */}
                                     <img
-                                        // src={SVAbout2}
-                                        src='https://img.freepik.com/free-photo/close-up-woman-signing-divorce-agreement_23-2148542287.jpg?t=st=1739542764~exp=1739546364~hmac=c157bd7126e94ee7eab68e3f3fbd5c557be32f1f7c49b1ad7bb3ccf0133a162a&w=1380'
+                                        src={countryImages.australia4}
                                         className="absolute bottom-0 md:h-60 h-48 left-0 w-28 lg:w-44 rounded-t-full border-5 border-white"
                                         alt="Small Image"
                                         style={{ objectFit: "cover" }}
@@ -246,7 +238,7 @@ export default function WorkVisa() {
                                                 <p className='text-black mt-2'>Get expert advice on relocation, accommodation, and adapting to your new workplace environment.</p>
                                             </div>
                                             <div className="col-lg-12 my-4">
-                                                <Link to='/ContactPage' className="btn btn-small btn-info">Contact Us Now</Link>
+                                                <Link to='/BookNowPage' className="btn btn-small btn-info" href="#">Apply Now</Link>
                                             </div>
                                         </div>
                                     </div>
@@ -288,7 +280,7 @@ export default function WorkVisa() {
                 {/* Section 3 */}
 
 
-                <div className="container-fluid feature">
+                <div className="container-fluid px-2 feature">
                     <div className="container py-5">
 
                         <div className="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: "800px" }}>
@@ -383,7 +375,7 @@ export default function WorkVisa() {
                 {/* Section 4 */}
 
 
-                <div className="section-4">
+                <div className="section-4 px-2">
                     <div className="container-fluid service overflow-hidden py-5">
                         <div className="container py-3">
                             <div
@@ -461,7 +453,7 @@ export default function WorkVisa() {
                 {/* Section 5 */}
 
 
-                <div className="ServiceForm mx- w-full overflow-hidden">
+                <div className="ServiceForm  mx- w-full overflow-hidden">
                     <div className="container">
                         <div className="content">
                             <div className="left-side">
@@ -486,8 +478,8 @@ export default function WorkVisa() {
                             </div>
                             <div className="right-side">
                                 <div className="topic-text">Send us a message</div>
-                                <p>If you have any work from me or any types of queries related to my tutorial, you can send me a message from here. It's my pleasure to help you.</p>
-                                
+                                <p className='max-w-[70%]'>If you have any work from me or any types of queries related to my tutorial, you can send me a message from here. It's my pleasure to help you.</p>
+
                                 <EmailForm></EmailForm>
                             </div>
                         </div>

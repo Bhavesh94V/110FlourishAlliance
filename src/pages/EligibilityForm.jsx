@@ -169,7 +169,7 @@ export default function EligibilityForm() {
 
                         <div className="form-group">
                             <label className="text-white font-semibold">Upload CV:</label>
-                            <input type="file" name="cv" accept=".pdf,.doc,.docx" onChange={handleChange} className="w-full p-3 rounded-lg bg-white bg-opacity-20 text-white focus:outline-none focus:ring-2 focus:ring-[#B21E24]" required />
+                            <input type="file" name="cv" accept=".pdf,.doc,.docx" onChange={handleChange} className="w-full p-3 rounded-lg bg-white bg-opacity-20 text-dark focus:outline-none focus:ring-2 focus:ring-[#B21E24]" required />
                         </div>
 
                         <button type="submit" className="submit-btn w-full p-3 rounded-lg bg-white text-[#B21E24] font-bold hover:bg-opacity-90 transition-all" disabled={loading}>

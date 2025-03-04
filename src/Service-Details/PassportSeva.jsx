@@ -67,32 +67,9 @@ export default function PassportSeva() {
         wow.init();
     }, []);
 
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        purpose: '',
-        country: '',
-        message: ''
-    });
-
-    const [formErrors, setFormErrors] = useState({});
-
-    const validateForm = () => {
-        const errors = {};
-        if (!formData.name) errors.name = 'Full name is required';
-        if (!formData.email) errors.email = 'Email is required';
-        if (!formData.phone) errors.phone = 'Phone number is required';
-        if (!formData.purpose) errors.purpose = 'Please select a purpose';
-        if (!formData.country) errors.country = 'Please select a country';
-        if (!formData.message) errors.message = 'Message is required';
-        return errors;
-    };
-
-
     return (
         <div className="ServicesDetailsMain md:mt-5 pt-4" style={{ backgroundImage: `url(${bgImage})`, scrollBehavior: 'smooth' }}>
-            <div className="container-fluid pt-5">
+            <div className="container-fluid p-0 pt-5">
 
 
                 <div className='CareersPage'>
@@ -105,22 +82,23 @@ export default function PassportSeva() {
 
                         </div>
                         <div className="breadcrumb-text">
-                            <h3>Passport Seva</h3>
+                            <h3>Passport Visa Service</h3>
                             <p>
                                 Get expert help for a smooth passport application. <br />
                                 We handle everything from start to finish.
                             </p>
-                            <Link to="/ContactPage" className="contact-button bg-[#B21E24] p-2 rounded">
-                                Contact Us Today
+                            <Link to="/ContactPage" className="contact-button bg-[#B21E24] p-2 px-3 rounded-full">
+                                Get in Touch with Us Today
                             </Link>
                         </div>
-                        <div className="z-50">
+
+                        <div className="z-50 animate__animated animate__fadeInDown">
                             <div className="text-center pt-3" style={{ maxWidth: '900px' }}>
-                                <ul className="d-flex justify-content-center gap-2 font-bold text-white mb-0 wow fadeInDown" data-wow-delay="0.3s" >
-                                    <li className="item">
-                                        <Link to="/">Home</Link> <span className=''>/</span>
+                                <ul className="d-flex justify-content-center gap-2 font-semibold text-white mb-0 wow fadeInDown" data-wow-delay="0.3s" >
+                                    <li className="item hover:scale-110 transition-all">
+                                        <Link to="/ServicePage">Service</Link> <span className=''>/</span>
                                     </li>
-                                    <li className="text-danger">Opportunity</li>
+                                    <li className="text-white font-bold">Passport Visa Visa</li>
                                 </ul>
                             </div>
                         </div>
@@ -256,7 +234,7 @@ export default function PassportSeva() {
                                                 <p className='text-black mt-2'>Once processed, we assist you in collecting your passport and other related documents.</p>
                                             </div>
                                             <div className="col-lg-12 my-4">
-                                                <a className="btn btn-small btn-info" href="#">Apply Now</a>
+                                                <Link to='/BookNowPage' className="btn btn-small btn-info" href="#">Apply Now</Link>
                                             </div>
                                         </div>
                                     </div>
@@ -508,8 +486,8 @@ export default function PassportSeva() {
                             </div>
                             <div className="right-side">
                                 <div className="topic-text">Send us a message</div>
-                                <p>If you have any work from me or any types of queries related to my tutorial, you can send me a message from here. It's my pleasure to help you.</p>
-                               
+                                <p className='max-w-[70%]'>If you have any work from me or any types of queries related to my tutorial, you can send me a message from here. It's my pleasure to help you.</p>
+
                                 <EmailForm></EmailForm>
                             </div>
                         </div>

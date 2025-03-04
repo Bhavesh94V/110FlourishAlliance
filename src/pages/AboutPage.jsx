@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/Pages/AboutPage.css';
-import bgImage from '../assets/imgs/AboutArea/bginner.jpg';
 import consultancyImg from '../assets/imgs/Pages/Consultancy.jpg';
 import consultancyImg2 from '../assets/imgs/Pages/Consultancy2.jpg';
-import australiaImg from '../assets/imgs/Pages/australia.jpg';
-import unitedStatesImg from '../assets/imgs/Pages/unitedtStates.jpg';
-import losAngelesImg from '../assets/imgs/Pages/losAngelus.jpg';
-import dubaiImg from '../assets/imgs/Pages/dubai.jpg';
 import teamMember1 from '../assets/imgs/Pages/TeamMember1.jpg';
 import teamMember2 from '../assets/imgs/Pages/TeamMember2.jpg';
 import teamMember3 from '../assets/imgs/Pages/TeamMember3.jpg';
@@ -16,6 +11,7 @@ import Footer from '../components/Footer';
 import chooseimgbg from '../ServicesDetails/Service-MiniSlider-Imgs/chooseimgbg.png'
 import WOW from 'wowjs';
 import 'animate.css';
+import countryImages from '../CountryDetails/countryImages';
 
 export default function AboutPage() {
 
@@ -121,18 +117,18 @@ export default function AboutPage() {
 
 
   const images = [
-    { src: australiaImg, alt: 'Australia', text: 'This is Australia. Known for its landscapes, wildlife, and cities.' },
-    { src: unitedStatesImg, alt: 'United States', text: 'This is the U.S., a global superpower with diverse culture.' },
-    { src: losAngelesImg, alt: 'Los Angeles', text: 'This is Los Angeles, known for Hollywood and cultural diversity.' },
-    { src: dubaiImg, alt: 'Dubai', text: 'This is Dubai, a global hub for business and tourism.' },
-    { src: australiaImg, alt: 'Australia', text: 'This is Australia. Known for its landscapes, wildlife, and cities.' },
-    { src: unitedStatesImg, alt: 'United States', text: 'This is the U.S., a global superpower with diverse culture.' },
-    { src: losAngelesImg, alt: 'Los Angeles', text: 'This is Los Angeles, known for Hollywood and cultural diversity.' },
-    { src: dubaiImg, alt: 'Dubai', text: 'This is Dubai, a global hub for business and tourism.' },
+    { src: countryImages.australia3, alt: 'Australia', text: 'Australia is known for its top universities, beautiful landscapes, and student-friendly environment.' },
+    { src: countryImages.usa3, alt: 'United States', text: 'The United States offers world-class education, diverse culture, and excellent career opportunities for students.' },
+    { src: countryImages.southafrica3, alt: 'South Africa', text: 'South Africa is known for its rich culture, stunning scenery, and affordable education options.' },
+    { src: countryImages.brazil3, alt: 'Brazil', text: 'Brazil is famous for its vibrant culture, strong academic institutions, and welcoming atmosphere for international students.' },
+    { src: countryImages.france3, alt: 'France', text: 'France is a top destination for students, offering high-quality education, historic universities, and cultural richness.' },
+    { src: countryImages.denmark2, alt: 'Denmark', text: 'Denmark provides a high standard of education, innovative teaching methods, and a great quality of life.' },
+    { src: countryImages.italy3, alt: 'Italy', text: 'Italy is home to prestigious universities, historical landmarks, and excellent study-abroad opportunities.' },
+    { src: countryImages.uk3, alt: 'United Kingdom', text: 'The UK is a global leader in education, known for its prestigious universities and research opportunities.' },
   ];
 
   return (
-    <div className="AboutPageMain md:mt-5 pt-5 bg-transparent" style={{ backgroundImage: `url(${bgImage})` }}>
+    <div className="AboutPageMain md:mt-5 pt-5 bg-transparent">
       <div className="about-section-container mt-5">
 
         <div className="CareersPage">
