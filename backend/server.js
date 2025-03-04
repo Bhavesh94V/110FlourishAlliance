@@ -87,82 +87,41 @@ const sendEligibilityEmail = (formData, cvPath) => {
         to: process.env.RECIPIENT_EMAIL,
         subject: 'New Eligibility Form Submission',
         html: `
-    <html>
-        <head>
-            <style>
-                body {
-                    font-family: 'Arial', sans-serif;
-                    color: #333;
-                    background-color: #f9f9f9;
-                    margin: 0;
-                    padding: 0;
-                }
-                .container {
-                    width: 80%;
-                    max-width: 600px;
-                    margin: 30px auto;
-                    padding: 20px;
-                    background-color: #fff;
-                    border-radius: 8px;
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                }
-                h1 {
-                    color: #fff;
-                    background-color: #d32f2f; /* Red background for the title */
-                    padding: 15px;
-                    text-align: center;
-                    border-radius: 8px;
-                    margin-bottom: 20px;
-                }
-                h2 {
-                    color: #333;
-                    font-size: 20px;
-                }
-                p {
-                    font-size: 16px;
-                    line-height: 1.6;
-                }
-                .highlight {
-                    font-weight: bold;
-                    color: #333;
-                }
-                .footer {
-                    text-align: center;
-                    margin-top: 20px;
-                    color: #888;
-                    font-size: 14px;
-                }
-                .hr {
-                    border: 0;
-                    border-top: 1px solid #ddd;
-                    margin: 20px 0;
-                }
-            </style>
-        </head>
-        <body>
-            <div class="container">
-                <h1>Eligibility Form Submission</h1>
-                <h2>New Submission Details</h2>
-                <p><span class="highlight">First Name:</span> ${formData.firstName}</p>
-                <p><span class="highlight">Middle Name:</span> ${formData.middleName}</p>
-                <p><span class="highlight">Last Name:</span> ${formData.lastName}</p>
-                <p><span class="highlight">Contact:</span> ${formData.contact}</p>
-                <p><span class="highlight">Email:</span> ${formData.email}</p>
-                <p><span class="highlight">Country:</span> ${formData.country}</p>
-                <p><span class="highlight">Enquiry:</span> ${formData.enquiry}</p>
-                <p><span class="highlight">Education:</span> ${formData.education}</p>
-                <p><span class="highlight">Date of Birth:</span> ${formData.dob}</p>
-                <p><span class="highlight">Gender:</span> ${formData.sex}</p>
-                <div class="hr"></div>
-                <p class="footer">Best regards, <br/> Eligibility Form System</p>
-            </div>
-        </body>
-    </html>
+    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; background-color: #f9f9f9; border-radius: 8px; border: 1px solid #e0e0e0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <h1 style="color: #ffffff; background-color: #d32f2f; padding: 15px; text-align: center; border-radius: 8px; margin-bottom: 20px; font-size: 24px;">
+            📌 Eligibility Form Submission
+        </h1>
+        
+        <h2 style="color: #333; font-size: 20px; border-bottom: 2px solid #d32f2f; padding-bottom: 5px;">
+            📝 New Submission Details
+        </h2>
+
+        <p><strong style="color: #d32f2f;">First Name:</strong> ${formData.firstName}</p>
+        <p><strong style="color: #d32f2f;">Middle Name:</strong> ${formData.middleName || 'N/A'}</p>
+        <p><strong style="color: #d32f2f;">Last Name:</strong> ${formData.lastName}</p>
+        <p><strong style="color: #d32f2f;">Contact:</strong> ${formData.contact}</p>
+        <p><strong style="color: #d32f2f;">Email:</strong> ${formData.email}</p>
+        <p><strong style="color: #d32f2f;">Country:</strong> ${formData.country}</p>
+        <p><strong style="color: #d32f2f;">Enquiry:</strong> ${formData.enquiry}</p>
+        <p><strong style="color: #d32f2f;">Education:</strong> ${formData.education}</p>
+        <p><strong style="color: #d32f2f;">Date of Birth:</strong> ${formData.dob}</p>
+        <p><strong style="color: #d32f2f;">Gender:</strong> ${formData.sex}</p>
+
+        <div style="border-top: 2px solid #e0e0e0; margin: 20px 0;"></div>
+
+        <footer style="text-align: center; margin-top: 20px; font-size: 12px; color: #777;">
+            &copy; ${new Date().getFullYear()} Your Company Name. All rights reserved.
+        </footer>
+    </div>
     `,
-        attachments: cvPath ? [{
-            filename: `CV-${formData.firstName}.pdf`,
-            path: cvPath
-        }] : []
+        attachments: cvPath
+            ? [
+                {
+                    filename: `CV-${formData.firstName}.pdf`,
+                    path: cvPath,
+                },
+            ]
+            : [],
     };
 
 
@@ -320,13 +279,24 @@ const sendContactEmail = (formData) => {
         from: process.env.EMAIL_USER,
         to: process.env.RECIPIENT_EMAIL,
         subject: 'New Contact Form Submission',
-        text: `
-        Full Name: ${formData.full_name}
-        Email: ${formData.email}
-        Phone: ${formData.phone}
-        Message: ${formData.message}
-        `,
+        html: `
+    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; background-color: #f9fafb;">
+        <h2 style="color: #1e3a8a; text-align: center; border-bottom: 2px solid #1e3a8a; padding-bottom: 10px;">
+            📩 New Contact Form Submission
+        </h2>
+        <p><strong style="color: #374151;">Full Name:</strong> ${formData.full_name}</p>
+        <p><strong style="color: #374151;">Email:</strong> ${formData.email}</p>
+        <p><strong style="color: #374151;">Phone:</strong> ${formData.phone}</p>
+        <p><strong style="color: #374151;">Message:</strong></p>
+        <p style="background-color: #e5e7eb; padding: 10px; border-radius: 5px; color: #1f2937;">${formData.message}</p>
+
+        <footer style="text-align: center; margin-top: 20px; font-size: 12px; color: #6b7280;">
+            &copy; ${new Date().getFullYear()} Your Company Name. All rights reserved.
+        </footer>
+    </div>
+    `,
     };
+
 
     transporter.sendMail(mailOptions, (err, info) => {
         if (err) {
