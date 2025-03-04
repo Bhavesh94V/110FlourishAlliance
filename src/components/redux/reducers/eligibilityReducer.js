@@ -1,7 +1,7 @@
 import {
-    SUBMIT_CONTACT_REQUEST,
-    SUBMIT_CONTACT_SUCCESS,
-    SUBMIT_CONTACT_FAILURE,
+    SUBMIT_ELIGIBILITY_REQUEST,
+    SUBMIT_ELIGIBILITY_SUCCESS,
+    SUBMIT_ELIGIBILITY_FAILURE,
     CLEAR_MESSAGES
 } from "../actions/contactActions";
 
@@ -11,15 +11,15 @@ const initialState = {
     error: "",
 };
 
-const contactReducer = (state = initialState, action) => {
+const eligibilityReducer = (state = initialState, action) => {
     switch (action.type) {
-        case SUBMIT_CONTACT_REQUEST:
+        case SUBMIT_ELIGIBILITY_REQUEST:
             return { ...state, loading: true, error: "" };
 
-        case SUBMIT_CONTACT_SUCCESS:
+        case SUBMIT_ELIGIBILITY_SUCCESS:
             return { ...state, loading: false, message: action.payload };
 
-        case SUBMIT_CONTACT_FAILURE:
+        case SUBMIT_ELIGIBILITY_FAILURE:
             return { ...state, loading: false, error: action.payload };
 
         case CLEAR_MESSAGES:
@@ -30,4 +30,4 @@ const contactReducer = (state = initialState, action) => {
     }
 };
 
-export default contactReducer;
+export default eligibilityReducer;

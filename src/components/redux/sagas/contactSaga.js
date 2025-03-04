@@ -34,7 +34,7 @@ function* submitContactSaga(action) {
 
 function* handleSubmitEligibility(action) {
     try {
-        const result = yield call(submitEligibilityForm, action.payload);
+        yield call(submitEligibilityForm, action.payload);
         yield put(submitEligibilitySuccess('Form submitted successfully!'));
     } catch (error) {
         yield put(submitEligibilityFailure(error.message));
@@ -52,7 +52,7 @@ function* submitAppointmentSaga(action) {
 
 function* handleSubmitPopUpForm(action) {
     try {
-        const response = yield call(submitPopUpForm, action.payload);
+        yield call(submitPopUpForm, action.payload);
         yield put(submitPopUpFormSuccess("Form submitted successfully!"));
     } catch (error) {
         yield put(submitPopUpFormFailure("Failed to submit form. Try again."));

@@ -1,7 +1,7 @@
 import {
-    SUBMIT_CONTACT_REQUEST,
-    SUBMIT_CONTACT_SUCCESS,
-    SUBMIT_CONTACT_FAILURE,
+    SUBMIT_APPOINTMENT_REQUEST,
+    SUBMIT_APPOINTMENT_SUCCESS,
+    SUBMIT_APPOINTMENT_FAILURE,
     CLEAR_MESSAGES
 } from "../actions/contactActions";
 
@@ -11,15 +11,15 @@ const initialState = {
     error: "",
 };
 
-const contactReducer = (state = initialState, action) => {
+const appointmentReducer = (state = initialState, action) => {
     switch (action.type) {
-        case SUBMIT_CONTACT_REQUEST:
+        case SUBMIT_APPOINTMENT_REQUEST:
             return { ...state, loading: true, error: "" };
 
-        case SUBMIT_CONTACT_SUCCESS:
+        case SUBMIT_APPOINTMENT_SUCCESS:
             return { ...state, loading: false, message: action.payload };
 
-        case SUBMIT_CONTACT_FAILURE:
+        case SUBMIT_APPOINTMENT_FAILURE:
             return { ...state, loading: false, error: action.payload };
 
         case CLEAR_MESSAGES:
@@ -30,4 +30,4 @@ const contactReducer = (state = initialState, action) => {
     }
 };
 
-export default contactReducer;
+export default appointmentReducer;

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import '../assets/styles/Opportunity.css';
-import bgImage from '../assets/imgs/AboutArea/bginner.jpg';
 import chooseimgbg from '../ServicesDetails/Service-MiniSlider-Imgs/chooseimgbg.png';
 import { FaUserCheck, FaFileAlt, FaHandHoldingUsd, FaClipboardCheck, FaChartLine, FaHeadset } from "react-icons/fa";
 import { useDispatch, useSelector } from 'react-redux';
@@ -95,26 +94,26 @@ export default function EligibilityForm() {
                         <div className="form-row grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="form-group">
                                 <label className="text-white font-semibold">First Name:</label>
-                                <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} className="w-full p-3 rounded-lg bg-white bg-opacity-20 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-[#B21E24]" required />
+                                <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} className="w-full p-3 rounded-lg bg-white bg-opacity-20 text-dark placeholder-white focus:outline-none focus:ring-2 focus:ring-[#B21E24]" required />
                             </div>
                             <div className="form-group">
                                 <label className="text-white font-semibold">Middle Name:</label>
-                                <input type="text" name="middleName" value={formData.middleName} onChange={handleChange} className="w-full p-3 rounded-lg bg-white bg-opacity-20 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-[#B21E24]" />
+                                <input type="text" name="middleName" value={formData.middleName} onChange={handleChange} className="w-full p-3 rounded-lg bg-white bg-opacity-20 text-dark placeholder-white focus:outline-none focus:ring-2 focus:ring-[#B21E24]" />
                             </div>
                             <div className="form-group">
                                 <label className="text-white font-semibold">Last Name:</label>
-                                <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} className="w-full p-3 rounded-lg bg-white bg-opacity-20 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-[#B21E24]" required />
+                                <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} className="w-full p-3 rounded-lg bg-white bg-opacity-20 text-dark placeholder-white focus:outline-none focus:ring-2 focus:ring-[#B21E24]" required />
                             </div>
                         </div>
 
                         <div className="form-row grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="form-group">
                                 <label className="text-white font-semibold">Contact No:</label>
-                                <input type="text" name="contact" value={formData.contact} onChange={handleChange} className="w-full p-3 rounded-lg bg-white bg-opacity-20 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-[#B21E24]" required />
+                                <input type="text" name="contact" value={formData.contact} onChange={handleChange} className="w-full p-3 rounded-lg bg-white bg-opacity-20 text-dark placeholder-white focus:outline-none focus:ring-2 focus:ring-[#B21E24]" required />
                             </div>
                             <div className="form-group">
                                 <label className="text-white font-semibold">Email ID:</label>
-                                <input type="email" name="email" value={formData.email} onChange={handleChange} className="w-full p-3 rounded-lg bg-white bg-opacity-20 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-[#B21E24]" required />
+                                <input type="email" name="email" value={formData.email} onChange={handleChange} className="w-full p-3 rounded-lg bg-white bg-opacity-20 text-dark placeholder-white focus:outline-none focus:ring-2 focus:ring-[#B21E24]" required />
                             </div>
                         </div>
 
