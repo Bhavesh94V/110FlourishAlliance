@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../assets/styles/Opportunity.css'
 import bgImage from '../assets/imgs/AboutArea/bginner.jpg';
-import { Link, Links } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import LogosSection from '../components/LogosSection ';
 import Australia from '../assets/imgs/Pages/Country-Images/Country-Images/Australia.png';
 import Belgium from '../assets/imgs/Pages/Country-Images/Country-Images/Belgium.png';
@@ -10,44 +10,20 @@ import Canada from '../assets/imgs/Pages/Country-Images/Country-Images/Canada.pn
 import Denmark from '../assets/imgs/Pages/Country-Images/Country-Images/Denmark.png';
 import France from '../assets/imgs/Pages/Country-Images/Country-Images/France.png';
 import Germany from '../assets/imgs/Pages/Country-Images/Country-Images/Germany.png';
-import Greece from '../assets/imgs/Pages/Country-Images/Country-Images/Greece.png';
-import Hungary from '../assets/imgs/Pages/Country-Images/Country-Images/Hungary.png';
-import Iceland from '../assets/imgs/Pages/Country-Images/Country-Images/Iceland.png';
-import India from '../assets/imgs/Pages/Country-Images/Country-Images/india.jpg';
-import Ireland from '../assets/imgs/Pages/Country-Images/Country-Images/Ireland.png';
 import Italy from '../assets/imgs/Pages/Country-Images/Country-Images/Italy.png';
-import opportunity from '../CountryDetails/CountryDetailsImgs/oppourtinity.jpg';
-import Luxembourg from '../assets/imgs/Pages/Country-Images/Country-Images/Luxembourg.png'; 
-import Peru from '../assets/imgs/Pages/Country-Images/Country-Images/Peru.png';
-import Colombia from '../assets/imgs/Pages/Country-Images/Country-Images/Colombia.png';
 import UK from '../assets/imgs/Pages/Country-Images/Country-Images/UK.jpg';
-import Uruguay from '../assets/imgs/Pages/Country-Images/Country-Images/Uruguay.png';
-import Ecuador from '../assets/imgs/Pages/Country-Images/Country-Images/Ecuador.png';
 import USA from '../assets/imgs/Pages/Country-Images/Country-Images/usa.jpg';
 import Japan from '../assets/imgs/Pages/Country-Images/Country-Images/Japan.jpg';
-// import UK from '../assets/imgs/Pages/Country-Images/Country-Images/UK.jpg';
 import NewZealand from '../assets/imgs/Pages/Country-Images/Country-Images/NewZealand.jpg';
 import SouthAfrica from '../assets/imgs/Pages/Country-Images/Country-Images/SouthAfrica.jpg';
 import chooseimgbg from '../ServicesDetails/Service-MiniSlider-Imgs/chooseimgbg.png'
 import { FaUserCheck, FaFileAlt, FaHandHoldingUsd, FaClipboardCheck, FaChartLine, FaHeadset } from "react-icons/fa";
-// import Footer from '../components/Footer';
 import EligibilityForm from './EligibilityForm';
 import PagesImage from '../assets/imgs/Pages/PagesImage';
 
 
 
 export default function CareersPage() {
-
-  const sidebarDetails = [
-    { title: "Check Your Eligibility", icon: <FaUserCheck className="text-blue-600 text-3xl" />, description: "Find out if you qualify for visa programs.", link: "#" },
-    { title: "Required Documents", icon: <FaFileAlt className="text-green-600 text-3xl" />, description: "Know which documents you need for eligibility.", link: "#" },
-    { title: "Financial Requirements", icon: <FaHandHoldingUsd className="text-yellow-600 text-3xl" />, description: "Understand the financial aspects of immigration.", link: "#" },
-    { title: "Processing Time", icon: <FaClipboardCheck className="text-purple-600 text-3xl" />, description: "Estimated timelines for different visa applications.", link: "#" },
-    { title: "Success Stories", icon: <FaChartLine className="text-orange-600 text-3xl" />, description: "Read about people who successfully immigrated.", link: "#" },
-    { title: "Talk to an Expert", icon: <FaHeadset className="text-red-600 text-3xl" />, description: "Get a free consultation with our experts.", link: "#" },
-  ];
-
-
 
   const countryImages = {
     Canada: Canada,
@@ -85,7 +61,7 @@ export default function CareersPage() {
 
 
         <div className="bg-breadcrumb flex flex-col">
-          <div className="breadcrumb-image">
+          <div className="breadcrumb-image ">
 
             <div className="overlay-gradient"></div>
 

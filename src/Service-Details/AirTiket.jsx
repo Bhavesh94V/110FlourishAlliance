@@ -15,6 +15,7 @@ import chooseimgbg from '../ServicesDetails/Service-MiniSlider-Imgs/chooseimgbg.
 import WOW from 'wowjs';
 import 'animate.css';
 import EmailForm from './EmailForm';
+import PagesImage from '../assets/imgs/Pages/PagesImage';
 
 const studyVisaSteps = [
     {
@@ -129,29 +130,30 @@ export default function AirTiket() {
                     >
                         {/* Image Container */}
                         <div className="relative flex justify-center mb-5">
-                            <div className="w-[300px] lg:w-[450px] relative">
+                            <div className=" w-[250px] md:w-[300px] lg:w-[450px] relative">
                                 {/* Main Image */}
                                 <img
-                                    src="https://html.kodesolution.com/2024/visago-php/images/resource/about1-1.jpg"
-                                    className="rounded-b-full border-4 border-danger"
+                                    src={PagesImage.air1}
+                                    className="rounded-b-full border-4 border-danger w-full max-h-[500px]"
+
                                     alt="Main Image"
                                 />
                                 {/* Overlay Image */}
                                 <img
-                                    src="https://img.freepik.com/free-photo/green-cards-passports-flat-lay_23-2149828138.jpg?t=st=1739272243~exp=1739275843~hmac=a8d0c263d752fb2c346854f0b82fb3e11a3aeede66d1d473b257d79d36616017&w=740"
-                                    className="absolute bottom-0 left-0 w-28 lg:w-44 rounded-t-full border-5 border-white"
+                                    src={PagesImage.air2}
+                                    className="absolute bottom-0 md:h-60 h-48 left-0 w-28 lg:w-44 rounded-t-full border-5 border-white"
                                     alt="Small Image"
-
+                                    style={{ objectFit: "cover" }}
                                 />
                                 {/* Visa Success Badge */}
-                                <div className="absolute top-10 -left-14 bg-[#B21E24] text-white text-center text-sm font-bold p-3 rounded-full border-5 border-white">
+                                <div className="absolute top-10 hidden md:block -left-14 bg-[#B21E24] text-white text-center text-sm font-bold p-3 rounded-full border-5 border-white">
                                     100% <br /> Proven <br /> Visa <br />Success Rate
                                 </div>
                             </div>
                         </div>
 
                         {/* About Content */}
-                        <div className="text-start lg:text-left max-w-2xl mb-auto md:mt-0">
+                        <div className="text-start lg:text-left max-w-2xl px-3 mt-0 mb-auto md:mt-0">
                             <h1 className="font-bold text-[#B21E24] text-[32px] mb-3">
                                 Air Ticket Visa Services for a Seamless Travel Experience
                             </h1>
@@ -308,7 +310,7 @@ export default function AirTiket() {
                         <div className="row g-4 align-items-center">
 
                             <div className="col-lg-12 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
-                                <img src={StudyVisa} className="img-fluid h-[330px] object-cover rounded-lg" alt="Air Ticket Visa" />
+                                <img src={PagesImage.air2} className="img-fluid h-[330px] object-cover rounded-lg" alt="Air Ticket Visa" />
                             </div>
 
                             <div className="col-xl-4">

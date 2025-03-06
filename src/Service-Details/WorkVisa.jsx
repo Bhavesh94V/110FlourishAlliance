@@ -17,6 +17,7 @@ import WOW from 'wowjs';
 import 'animate.css';
 import EmailForm from './EmailForm';
 import countryImages from '../CountryDetails/countryImages';
+import PagesImage from '../assets/imgs/Pages/PagesImage';
 
 const studyVisaSteps = [
     {
@@ -134,14 +135,14 @@ export default function WorkVisa() {
                                 <div className=" w-[250px] md:w-[300px] lg:w-[450px] relative">
                                     {/* Main Image */}
                                     <img
-                                        src={countryImages.australia3}
+                                        src={PagesImage.overlaywork1}
                                         className="rounded-b-full border-4 border-danger w-full max-h-[500px]"
 
                                         alt="Main Image"
                                     />
                                     {/* Overlay Image */}
                                     <img
-                                        src={countryImages.australia4}
+                                        src={PagesImage.overlaywork2}
                                         className="absolute bottom-0 md:h-60 h-48 left-0 w-28 lg:w-44 rounded-t-full border-5 border-white"
                                         alt="Small Image"
                                         style={{ objectFit: "cover" }}
@@ -154,7 +155,7 @@ export default function WorkVisa() {
                             </div>
 
                             {/* About Content */}
-                            <div className="text-start lg:text-left max-w-2xl mb-auto md:mt-0">
+                            <div className="text-start lg:text-left max-w-2xl px-3 mt-0 mb-auto md:mt-0">
                                 <h1 className="font-bold text-[#B21E24] text-[32px] mb-3">
                                     Work Visa Services for Global Career Opportunities
                                 </h1>
@@ -296,7 +297,7 @@ export default function WorkVisa() {
                         <div className="row g-4 align-items-center">
 
                             <div className="col-lg-12 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
-                                <img src={StudyVisa} className="img-fluid h-[330px] object-cover rounded-lg" alt="Features" />
+                                <img src={PagesImage.overlaywork2} className="img-fluid h-[330px] object-cover rounded-lg" alt="Features" />
                             </div>
 
 
