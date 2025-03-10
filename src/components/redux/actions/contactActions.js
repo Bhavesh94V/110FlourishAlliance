@@ -16,6 +16,10 @@ export const SUBMIT_ELIGIBILITY_REQUEST = "SUBMIT_ELIGIBILITY_REQUEST";
 export const SUBMIT_ELIGIBILITY_SUCCESS = "SUBMIT_ELIGIBILITY_SUCCESS";
 export const SUBMIT_ELIGIBILITY_FAILURE = "SUBMIT_ELIGIBILITY_FAILURE";
 
+export const SUBMIT_EMAIL_REQUEST = "SUBMIT_EMAIL_REQUEST";
+export const SUBMIT_EMAIL_SUCCESS = "SUBMIT_EMAIL_SUCCESS";
+export const SUBMIT_EMAIL_FAILURE = "SUBMIT_EMAIL_FAILURE";
+
 
 export const submitContactRequest = (formData) => ({
     type: SUBMIT_CONTACT_REQUEST,
@@ -78,6 +82,22 @@ export const submitPopUpFormFailure = (error) => ({
     type: SUBMIT_POPUP_FORM_FAILURE,
     payload: error,
 });
+
+export const submitEmailRequest = (formData) => ({
+    type: SUBMIT_EMAIL_REQUEST,
+    payload: formData,
+});
+
+export const submitEmailSuccess = (message) => ({
+    type: SUBMIT_EMAIL_SUCCESS,
+    payload: message,
+});
+
+export const submitEmailFailure = (error) => ({
+    type: SUBMIT_EMAIL_FAILURE,
+    payload: error,
+});
+
 
 
 export const clearMessages = () => ({

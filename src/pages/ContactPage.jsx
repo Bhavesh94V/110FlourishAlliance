@@ -51,7 +51,7 @@ export default function ContactPage() {
           <span style={{ fontWeight: '600' }}>Monday - Friday:</span> 9:00 AM - 6:00 PM
         </>,
         <>
-          <span style={{ fontWeight: '600' }}>Saturday:</span> Closed
+          <span style={{ fontWeight: '600' }}>Sunday:</span> Closed
         </>
       ],
     },

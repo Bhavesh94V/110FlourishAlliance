@@ -27,3 +27,7 @@ export const submitAppointmentForm = async (formData) => {
 export const submitPopUpForm = async (formData) => {
     return await axios.post("http://localhost:5000/send-email", formData);
 };
+
+export const sendEmailAPI = async (formData) => {
+    return await axios.post("http://localhost:5000/send-email", formData);
+};

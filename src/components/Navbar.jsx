@@ -10,7 +10,11 @@ const navbarConfig = {
         { icon: "fas fa-envelope", text: "info@flourishalliiance.com", href: "mailto:info@flourishalliiance.com" },
         { icon: "fas fa-phone-alt", text: "+91 75739-66606 ", href: "tel:+75739-66606   " },
     ],
-    socialMedia: ["twitter", "facebook-f", "linkedin-in", "instagram", "youtube"],
+    socialMedia: [
+        { name: "twitter", href: "https://x.com/flourish_amd" },
+        { name: "linkedin-in", href: "https://www.linkedin.com/in/flourish-alliance-034536341/" },
+        { name: "instagram", href: "https://www.instagram.com/flourish_allince/" }
+    ],
     navLinks: [
         { name: "Home", to: "/" },
         { name: "About Us", to: "/AboutPage" },
@@ -76,16 +80,20 @@ export default function Navbar() {
                         </div>
                     </div>
                     <div className="col-lg-3 text-center">
-                        <div className="d-inline-flex align-items-center" style={{ height: "45px" }}>
-                            {navbarConfig.socialMedia.map((icon, idx) => (
-                                <a
-                                    key={idx}
-                                    className="btn btn-sm border rounded-circle me-2 animate__animated animate__zoomIn"
-                                    href="#"
-                                >
-                                    <i className={`fab fa-${icon} fw-normal text-white`}></i>
-                                </a>
-                            ))}
+                        <div className="d-inline-flex gap-2 align-items-center" style={{ height: "45px" }}>
+                            {
+                                navbarConfig.socialMedia.map((social, idx) => (
+                                    <a
+                                        key={idx}
+                                        href={social.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center justify-center w-7 p-3 h-7 rounded-full border border-white text-white transition-all duration-300 hover:scale-105"
+                                    >
+                                        <i className={`fab fa-${social.name} text-lg`}></i>
+                                    </a>
+                                ))
+                            }
                         </div>
                     </div>
                     <div className="col-lg-4 text-center text-lg-end">

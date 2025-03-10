@@ -88,11 +88,9 @@ const Footer = () => {
                                     <p><i className="my-3 fa fa-phone-alt"></i> +91 75739-66606</p>
                                     <p><i className="fa fa-envelope"></i>info@flourishalliiance.com</p>
                                     <div className="footer-social">
-                                        <a href="#"><i className="fab fa-twitter animate__animated animate__zoomIn"></i></a>
-                                        <a href="#"><i className="fab fa-facebook-f animate__animated animate__zoomIn"></i></a>
-                                        <a href="#"><i className="fab fa-youtube animate__animated animate__zoomIn"></i></a>
-                                        <a href="#"><i className="fab fa-instagram animate__animated animate__zoomIn"></i></a>
-                                        <a href="#"><i className="fab fa-linkedin-in animate__animated animate__zoomIn"></i></a>
+                                        <a target="_blank" href="https://x.com/flourish_amd"><i className="fab fa-twitter animate__animated animate__zoomIn"></i></a>
+                                        <a target="_blank" href="https://www.instagram.com/flourish_allince/"><i className="fab fa-instagram animate__animated animate__zoomIn"></i></a>
+                                        <a target="_blank" href="https://www.linkedin.com/in/flourish-alliance-034536341/"><i className="fab fa-linkedin-in animate__animated animate__zoomIn"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -108,8 +106,8 @@ const Footer = () => {
                     </div>
                     <div className="col-md-6 animate__animated animate__zoomIn">
                         <p>
-                            <Link className="" to="/privacy-policy">Privacy Policy | </Link>
-                            <Link className="" to="/terms">Terms & Conditions</Link>
+                            <Link className="" to="/">Privacy Policy | </Link>
+                            <Link className="" to="/">Terms & Conditions</Link>
                         </p>
                     </div>
                 </div>

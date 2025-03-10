@@ -43,7 +43,7 @@ const PopUpForm = ({ onClose }) => {
     };
 
     return (
-        <div className={`fixed inset-0 z-50 flex items-center justify-center bg-gray-900 bg-opacity-60 backdrop-blur-md transition-opacity duration-300 ${isVisible ? "opacity-100" : "opacity-0"}`}>
+        <div className={`fixed inset-0 z-[1000000] flex items-center justify-center bg-gray-900 bg-opacity-60 backdrop-blur-md transition-opacity duration-300 ${isVisible ? "opacity-100" : "opacity-0"}`}>
             <div className={`bg-white mt-5 flex flex-col md:flex-row rounded-3xl shadow-2xl w-[90%] md:w-[700px] relative transition-all duration-300 transform ${isVisible ? "scale-100" : "scale-95"}`}>
                 <div className="md:w-2/4 hidden md:flex flex-col justify-center items-center bg-[#B21E24] text-white p-6">
                     <h2 className="text-2xl font-bold mb-4">Get updates! Enter your email to stay informed.</h2>

@@ -88,7 +88,7 @@ export default function BookNowPage() {
                 <Clock className="h-5 w-5 text-white" />
                 <div>
                   <p className="text-sm text-white">Monday to Friday: 9:00 am - 7:00 pm</p>
-                  <p className="text-sm text-white">Saturday: 9:00 am - 5:30 pm</p>
+                  <p className="text-sm text-white">Sunday : Closed</p>
                 </div>
               </div>
             </div>

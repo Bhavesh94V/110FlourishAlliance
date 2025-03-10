@@ -6,7 +6,6 @@ import bgImage from "../assets/imgs/AboutArea/bginner.jpg";
 import Service from '../components/Service';
 import service1 from './Service-MiniSlider-Imgs/service3.jpg';
 // import mapImage from '../ServicesDetails/Service-MiniSlider-Imgs/mapImg.png'
-import StudyVisa from '../ServicesDetails/Service-MiniSlider-Imgs/Study-Visa.jpg'
 import StudyUSA from '../ServicesDetails/Service-MiniSlider-Imgs/StudyUSA.jpg'
 import StudyCanada from '../ServicesDetails/Service-MiniSlider-Imgs/StudyCanada.jpg'
 import StudyAustralia from '../ServicesDetails/Service-MiniSlider-Imgs/StudyAustralia.jpg'

@@ -14,13 +14,18 @@ import {
 
     SUBMIT_POPUP_FORM_REQUEST,
     submitPopUpFormSuccess,
-    submitPopUpFormFailure
+    submitPopUpFormFailure,
+
+    SUBMIT_EMAIL_REQUEST,
+    submitEmailSuccess,
+    submitEmailFailure
 } from "../actions/contactActions";
 
 import {
     submitEligibilityForm,
     submitAppointmentForm,
-    submitPopUpForm
+    submitPopUpForm,
+    sendEmailAPI
 } from "../../helpers/api";
 
 function* submitContactSaga(action) {
@@ -57,6 +62,19 @@ function* handleSubmitPopUpForm(action) {
     } catch (error) {
         yield put(submitPopUpFormFailure("Failed to submit form. Try again."));
     }
+}
+
+function* submitEmailSaga(action) {
+    try {
+        const response = yield call(sendEmailAPI, action.payload);
+        yield put(submitEmailSuccess(response.data.message));
+    } catch (error) {
+        yield put(submitEmailFailure("Failed to send email. Try again."));
+    }
+}
+
+export function* watchEmailSaga() {
+    yield takeLatest(SUBMIT_EMAIL_REQUEST, submitEmailSaga);
 }
 
 export function* watchPopUpFormSubmission() {

@@ -48,6 +48,7 @@ import StartUpVisa from './Service-Details/StartUpVisa';
 import PassportSeva from './Service-Details/PassportSeva';
 import FormIcons from './components/FormIcons';
 import AppWrapper from './components/PopUpForm';
+import WhatsAppButton from './components/WhatsAppButton';
 
 
 function App() {
@@ -127,6 +128,7 @@ function App() {
 
       {!loading && <FormIcons />}
       {!loading && <AppWrapper />}
+      {!loading && <WhatsAppButton />}
 
       <BackToTop />
     </div>
